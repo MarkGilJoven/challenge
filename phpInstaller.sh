@@ -1,9 +1,19 @@
 #!/bin/bash
+
+# Check if iam root or else no game 
+IAM=`whoami`
+if [ "$IAM" != "root" ]
+then
+  echo "I'm sorry: you must be a root to run this script"
+  exit 1
+fi
+
 # 1 argument or else no game
 if [ $# -ne 1 ]; then
 	printf "To use: `basename $0` <Random Number from Jenkins>"
 	exit 1
 fi
+
 # save args
 random=$1
 
@@ -40,16 +50,16 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ "${osver,,}" != null ]
+	if [ "$osver" != null ]
 	then
 		printf "This server is $osver."
-		if [ ${osver,,} == *"ubuntu"* ] 
+		if [ "${osver,,}" == "ubuntu" ] 
 		then
-			printf "Attempting to install Lamp."
-			sudo apt-get update
-			sudo apt-get install lamp-server^
+			printf "Attempting to install Lamp on $osver."
+			apt-get update
+			apt-get install lamp-server^
 			exit 0
-		elif [ ${osver,,} == *"centos"* ]
+		elif [ "${osver,,}" == "centos*" ]
 		then
 			printf "Attempting to install Lamp."
 			exit 0
@@ -57,25 +67,15 @@ do
 			printf "Figuring out how to install this..."
 			exit 1
 		fi
-		#
-		#
-		#
-	elif [ "$osver" = null ]
+	elif [ "$osver" == null ]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
 		exit 1
 	else
 		printf "It is assumed that this OS is an Ubuntu server.  Installing..."
-		sudo apt-get update
-		sudo apt-get install lamp-server^
 		exit 0
 	fi
 
-	#printf "Select from the following XAMPP Versions: \n
-	#1) Stable (5.6v)
-	#2) Version (7.0v)
-	#3) Latest and greatest (7.1v)
-	#4) Exit installation\n"
-	#read xamppver
+
 	
 done
