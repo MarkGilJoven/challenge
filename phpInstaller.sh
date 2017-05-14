@@ -1,25 +1,16 @@
 #!/bin/bash
 
-# if i am not root then no game
-iam=`whoami`
-if [" "$iam" != "root" ]; then
-	printf "I am very sorry, you must be the root to run this script."
-	exit 1
-fi
-
 # 1 argument or else no game
-if [ $# -ne 1 ]; then
-	printf "To use: `basename $0` <selection>"
-	exit 1
-fi
+#if [ $# -ne 1 ]; then
+#	printf "To use: `basename $0` <selection>"
+#	exit 1
+#fi
 
 # save args
 # xamppver=$1
 
-checkosver() {
 #check version of linux/unix
-osver = $(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')
-}
+osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 
 # the directory of the script
 directory="$(pwd)"
@@ -42,71 +33,31 @@ function cleanup {
 # register the cleanup function to be called on the EXIT signal
 trap cleanup EXIT
 
-
-# downloader of XAMPP installers 
-function downloader () {
-	if [ "`which wget`" != null ]; then
-		wget $file 
-	elif [["`which wget`" == null ] && ["`which curl`" != null ]]; then
-		curl -O $file
-	else
-		printf "wget and curl not found."
-		exit
-	fi
-} 
-
-installxamppver() {
-case $xamppver in
-	1)	printf "Starting to download and install XAMPP 5.6";
-		cd $work_directory
-		downloader $file
-		printf "Changing rights to execute installer";
-		chmod +x *run
-		sudo ./xampp*run
-;;		
-	2)	printf "Starting to download and install XAMPP 7.0";
-		cd $work_directory
-		downloader $file
-                printf "Changing rights to execute installer";
-                chmod +x *run
-		sudo ./xampp*run
-
-;;
-	3)	printf "Starting to download and install XAMPP 7.1";
-		cd $work_directory
-		downloader $file
-                printf "Changing rights to execute installer";
-                chmod +x *run
-		sudo ./xampp*run
-
-;;
-	*)
-		exit
-;;
-esac
-
-}
-
-xamppversion() {
-	case $xamppver in
-                1)	file="https://www.apachefriends.org/xampp-files/5.6.30/xampp-linux-x64-5.6.30-1-installer.run";
-			installxamppver "$xamppver" ;;
-                2)	file="https://www.apachefriends.org/xampp-files/7.0.16/xampp-linux-x64-7.0.16-0-installer.run";	
-			installxamppver "$xamppver" ;;
-                3)	file="https://www.apachefriends.org/xampp-files/7.1.2/xampp-linux-x64-7.1.2-0-installer.run";
-			installxamppver "$xamppver" ;;
-                4) printf "Installation aborted.  Goodbye.\n"; exit 0;;
-                *) msgerr="Invalid entry. Select from the numbers 1-4 only"
-        esac
-}
-
-#check version of xampp to install
+#check version of lamp to install
 while :
 do
 	# Print if there is a wrong selection
 	if [ "$msgerr" != "" ]
 	then
 		printf "\n$msgerr\n"
+	fi
+
+	if [ "$osver" != "Ubuntu" ]
+	then
+		printf "This is not an Ubuntu server.  Attempting to install Lamp."
+		#
+		#
+		#
+		exit 1
+	elif [ "$osver" = null ]
+	then
+		printf "The OS version couldn't be found.  Exiting prematurely."
+		exit 1
+	else
+		printf "It is assumed that this OS is an Ubuntu server.  Installing..."
+		sudo apt-get update
+		sudo apt-get install lamp-server^
+		exit 0
 	fi
 
 	#printf "Select from the following XAMPP Versions: \n
@@ -116,8 +67,4 @@ do
 	#4) Exit installation\n"
 	#read xamppver
 	
-	#Get $1 argument
-	xamppver=$1
-	#invoke xamppversion function
-	xamppversion xamppver
 done

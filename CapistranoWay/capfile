@@ -1,7 +1,0 @@
-default_run_options[:pty] = true
-
-task :installXAMPP  do
-  run "git clone https://#{gituser}:#{gitpass}@github.com/#{gitserver}/challenge.git '~/git_tmp.#{random}/'"
-  run "cd ~/git_tmp.#{random}; #{sudo} ./phpinstaller.sh \"#{selection}\""
-  run "rm -rf ~/git_tmp.#{random}"
-end
