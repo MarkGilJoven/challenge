@@ -51,31 +51,23 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ $lcosver != null ]
-	then
-		printf "This server is $osver.\n"
-		printf "DEBUG---$lcosver---DEBUG"
-		if [ $lcosver == *"ubuntu"* ] 
-		then
-			printf "Attempting to install Lamp on $osver."
-			apt-get update
-			apt-get install lamp-server^
-			exit 0
-		elif [ $lcosver == *"centos"* ]
-		then
-			printf "Attempting to install Lamp."
-			exit 0
-		else
-			printf "Figuring out how to install this..."
-			exit 1
-		fi
-	elif [ "$lcosver" == null ]
+	if [ $lcosver == null ]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
 		exit 1
+	elif [ $lcosver == *"ubuntu"* ]
+	then
+		printf "Attempting to install Lamp on $osver."
+		apt-get update
+		apt-get install lamp-server^
+		exit 0
+	elif [ $lcosver == *"centos"* ]
+	then
+		printf "Attempting to install Lamp on $osver."
+		###
+		exit 0
 	else
-		printf "It is assumed that this OS is an Ubuntu server.  Installing..."
+		printf "Figuring out hot to install this..."
 		exit 0
 	fi
-
 done
