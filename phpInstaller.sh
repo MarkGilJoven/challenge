@@ -1,13 +1,11 @@
 #!/bin/bash
-
 # 1 argument or else no game
-#if [ $# -ne 1 ]; then
-#	printf "To use: `basename $0` <selection>"
-#	exit 1
-#fi
-
+if [ $# -ne 1 ]; then
+	printf "To use: `basename $0` <Random Number from Jenkins>"
+	exit 1
+fi
 # save args
-# xamppver=$1
+random=$1
 
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
@@ -16,7 +14,7 @@ osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 directory="$(pwd)"
 
 # the temp directory used, within $directory
-work_directory=`mktemp -d "$directory/tmp"`
+work_directory=`mktemp -d "$directory/tmp.$random"`
 
 # check if tmp directory was created
 if [[ ! "$work_directory" || ! -d "$work_directory" ]]; then
