@@ -19,6 +19,7 @@ random=$1
 
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
+lcosver="${osver,,}"
 
 # the directory of the script
 directory="$(pwd)"
@@ -50,16 +51,16 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ "$osver" != null ]
+	if [ "$lcosver" != null ]
 	then
-		printf "This server is $osver."
-		if [ "${osver,,}" == "ubuntu" ] 
+		printf "This server is $osver.\n"
+		if [ "$lcosver" == "ubuntu" ] 
 		then
 			printf "Attempting to install Lamp on $osver."
 			apt-get update
 			apt-get install lamp-server^
 			exit 0
-		elif [ "${osver,,}" == "centos*" ]
+		elif [ "$lcosver" == "centos*" ]
 		then
 			printf "Attempting to install Lamp."
 			exit 0
@@ -67,7 +68,7 @@ do
 			printf "Figuring out how to install this..."
 			exit 1
 		fi
-	elif [ "$osver" == null ]
+	elif [ "$lcosver" == null ]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
 		exit 1
@@ -76,6 +77,4 @@ do
 		exit 0
 	fi
 
-
-	
 done
