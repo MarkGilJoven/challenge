@@ -51,17 +51,17 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ "$lcosver" == null ]
+	if [[ "$lcosver" == null ]]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
 		exit 1
-	elif [ "$lcosver" == *"ubuntu"* ]
+	elif [[ "$lcosver" == *"ubuntu"* ]]
 	then
 		printf "Attempting to install Lamp on $osver."
 		apt-get update
 		apt-get install lamp-server^
 		exit 0
-	elif [ "$lcosver" == *"centos"* ]
+	elif [[ "$lcosver" == *"centos"* ]]
 	then
 		printf "Attempting to install Lamp on $osver."
 		###
