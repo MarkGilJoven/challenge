@@ -54,6 +54,7 @@ do
 	if [ "$lcosver" != null ]
 	then
 		printf "This server is $osver.\n"
+		printf "DEBUG---$lcosver---DEBUG"
 		if [ "$lcosver" == "ubuntu" ] 
 		then
 			printf "Attempting to install Lamp on $osver."
