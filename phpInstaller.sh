@@ -42,7 +42,7 @@ do
 
 	if [ "$osver" != "Ubuntu" ]
 	then
-		printf "This is not an Ubuntu server.  Attempting to install Lamp."
+		printf "This is not an Ubuntu server.  This server is an $osver.  Attempting to install Lamp."
 		#
 		#
 		#
