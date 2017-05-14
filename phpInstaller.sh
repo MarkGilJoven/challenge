@@ -42,14 +42,14 @@ do
 
 	if [ "${osver,,}" != null ]
 	then
-		printf "This server is ${osver,,}."
-		if [ "${osver,,}" == *"ubuntu"* ] 
+		printf "This server is $osver."
+		if [ ${osver,,} == *"ubuntu"* ] 
 		then
 			printf "Attempting to install Lamp."
 			sudo apt-get update
 			sudo apt-get install lamp-server^
 			exit 0
-		elif [ "${osver,,}" == *"centos"* ]
+		elif [ ${osver,,} == *"centos"* ]
 		then
 			printf "Attempting to install Lamp."
 			exit 0
