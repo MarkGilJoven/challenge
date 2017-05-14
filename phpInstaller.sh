@@ -1,4 +1,21 @@
 #!/bin/bash
+
+# if i am not root then no game
+iam=`whoami`
+if [" "$iam" != "root" ]; then
+	printf "I am very sorry, you must be the root to run this script."
+	exit 1
+fi
+
+# 1 argument or else no game
+if [ $# -ne 1 ]; then
+	printf "To use: `basename $0` <selection>"
+	exit 1
+fi
+
+# save args
+# xamppver=$1
+
 checkosver() {
 #check version of linux/unix
 osver = $(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')
@@ -92,12 +109,15 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	printf "Select from the following XAMPP Versions: \n
-	1) Stable (5.6v)
-	2) Version (7.0v)
-	3) Latest and greatest (7.1v)
-	4) Exit installation\n"
-	read xamppver
+	#printf "Select from the following XAMPP Versions: \n
+	#1) Stable (5.6v)
+	#2) Version (7.0v)
+	#3) Latest and greatest (7.1v)
+	#4) Exit installation\n"
+	#read xamppver
+	
+	#Get $1 argument
+	xamppver=$1
 	#invoke xamppversion function
 	xamppversion xamppver
 done
