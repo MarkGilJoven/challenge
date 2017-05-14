@@ -40,13 +40,26 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ "${osver,,}" != "ubuntu" ]
+	if [ "${osver,,}" != null ]
 	then
-		printf "This is not an Ubuntu server.  This server is ${osver,,}.  Attempting to install Lamp."
+		printf "This server is ${osver,,}."
+		if [ "${osver,,}" == *"ubuntu"* ] 
+		then
+			printf "Attempting to install Lamp."
+			sudo apt-get update
+			sudo apt-get install lamp-server^
+			exit 0
+		elif [ "${osver,,}" == *"centos"* ]
+		then
+			printf "Attempting to install Lamp."
+			exit 0
+		else
+			printf "Figuring out how to install this..."
+			exit 1
+		fi
 		#
 		#
 		#
-		exit 0 
 	elif [ "$osver" = null ]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
