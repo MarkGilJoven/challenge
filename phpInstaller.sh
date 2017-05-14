@@ -40,13 +40,13 @@ do
 		printf "\n$msgerr\n"
 	fi
 
-	if [ "$osver" != "Ubuntu" ]
+	if [ "${osver,,}" != "ubuntu" ]
 	then
-		printf "This is not an Ubuntu server.  This server is an $osver.  Attempting to install Lamp."
+		printf "This is not an Ubuntu server.  This server is ${osver,,}.  Attempting to install Lamp."
 		#
 		#
 		#
-		exit 1
+		exit 0 
 	elif [ "$osver" = null ]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
