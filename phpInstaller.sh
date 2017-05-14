@@ -14,7 +14,7 @@ osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 directory="$(pwd)"
 
 # the temp directory used, within $directory
-work_directory=`mktemp -d "$directory/tmp.$random"`
+work_directory=`mktemp -d "$directory/tmp.$random.XXXXX"`
 
 # check if tmp directory was created
 if [[ ! "$work_directory" || ! -d "$work_directory" ]]; then
