@@ -84,7 +84,7 @@ do
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
 				command="service $i status"
 				testerr="testservice $command" 
-				if [[$testerr == *"error"*]]
+				if [[ $testerr == *"error"* ]]
 				then
 					errcount=$errcount+1
 				fi
