@@ -101,11 +101,13 @@ do
 					debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
 					debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
 					apt-get install --assume-yes lamp-server^
+					apt-get install --assume-yes libapache2-mod-php
 				else
 					printf "Installing Lamp on $osver.\n"
 					debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
                                         debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
                                         apt-get install --assume-yes lamp-server^
+					apt-get install --assume-yes libapache2-mod-php
 				fi
 			else
 				printf "Lamp is already installed.\n"
