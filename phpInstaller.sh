@@ -78,7 +78,12 @@ do
 			for i in ${lamps//,/ }
 			do
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
-				serviceCommand $i status >/dev/null 2>&1 || { errcount=$errcount+1; }
+				serviceCommand $i status
+				if [ $? -eq 0 ]; then
+					continue
+				else
+					errcount=$((errcount+1))
+				fi
 			done
 			if [[ $errcount > 0 ]]
 			then
