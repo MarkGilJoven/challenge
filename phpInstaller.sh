@@ -113,7 +113,7 @@ do
 				yum -y install php php-mysql
 		
 				#check ip of host
-				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
+				#ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 		
 				#set password for root of mysql
 				#mysqladmin -u root password $secret
