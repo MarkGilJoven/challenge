@@ -112,7 +112,7 @@ do
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 		
 				#set password for root of mysql
-				mysql mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
+				mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
 
 				#Start services
 				service httpd start
@@ -142,7 +142,7 @@ do
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 
 				#set password for root of mysql
-				mysql mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
+				mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
 				
 				#Start services
 				service httpd start
