@@ -134,17 +134,6 @@ do
 				
 				printf "Uninstalling Lamp on $osver.\n"
 				yum -y remove php php-mysql mysql-server httpd
-	
-				printf "Installing Lamp on $osver.\n"
-				#check ip of host
-				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
-
-				#set password for root of mysql
-				mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
-
-				#Start services
-				service httpd start
-				service mysqld start
                         else
                                 printf "testing"
 			fi
