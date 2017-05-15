@@ -9,14 +9,15 @@ then
 fi
 
 # 1 argument or else no game
-if [ $# -ne 2 ]; then
-	printf "To use: `basename $0` <Random Number from Jenkins> <Reinstall Lamp? 0 or 1>"
+if [ $# -ne 3 ]; then
+	printf "To use: `basename $0` <Random Number from Jenkins> <Reinstall Lamp> <mysql pass>"
 	exit 1
 fi
 
 # save args and variables
 random=$1
 reinstall=$2
+secret=$3
 lamps=apache2,apache2-bin,apache2-data,apache2-mpm-prefork,libaio1,libapache2-mod-php5,libapr1,libaprutil1,libaprutil1-dbd-sqlite3,libaprutil1-ldap,libdbd-mysql-perl,libdbi-perl,libhtml-template-perl,libmysqlclient18,libterm-readkey-perl,mysql-client-5.5,mysql-client-core-5.5,mysql-common,mysql-server,mysql-server-5.5,mysql-server-core-5.5,php5-cli,php5-common,php5-json,php5-mysql,php5-readline,ssl-cert
 lampsInstalled="Yes"
 errcount=0
