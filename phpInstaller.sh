@@ -66,13 +66,13 @@ do
 		printf "Updating the $osver system before Lamp installation.\n"
 		apt-get update
 			#Check if lamp-server is installed already or not
-			printf "Checking if Lamp is installed already"
+			printf "Checking if Lamp is installed already.\n"
 			for i in $(echo $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
-				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount + 1; }
+				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount+1; }
+				printf $errcount
 			done
-			printf $errcount
 			if [[ "$errcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
