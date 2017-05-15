@@ -40,7 +40,8 @@ fi
 # deletes the temp directory
 function cleanup {      
   rm -rf "$work_directory"
-  echo "Deleted temp working directory $work_directory"
+  rm -rf "/tmp/`basename $0`
+  print "Deleted temp working directory $work_directory\n"
 }
 
 # register the cleanup function to be called on the EXIT signal
@@ -76,6 +77,8 @@ do
 			then
 				printf "Lamp is not yet installed.\n"
 				printf "Installing Lamp on $osver.\n"	
+				debconf-set-selections <<< 'mysql-server mysql-server/root_password password qwer1234'
+				debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password qwer1234'
 				apt-get install --assume-yes lamp-server^
 			elif [[ "$errcount" == 0 ]]
 			then
