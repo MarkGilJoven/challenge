@@ -112,7 +112,7 @@ do
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 		
 				#set password for root of mysql
-				mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
+				mysqladmin -u root password $secret
 
 				#Start services
 				service httpd start
@@ -126,7 +126,7 @@ do
                         then
                                 printf "Lamp is already installed.\n"
                                 printf "$reinstall"
-				printf "Shutting down lamp..."
+				printf "Shutting down lamp...\n"
 				service mysql stop
 				killall -vw mysqld
 				service httpd stop
@@ -134,6 +134,15 @@ do
 				
 				printf "Uninstalling Lamp on $osver.\n"
 				yum -y remove php php-mysql mysql-server httpd
+	
+				printf "Installing Lamp on $osver.\n"
+				yum -y install httpd mysql-server php php-mysql
+	
+				#set password for root of mysql
+				mysqladmin -u root password $secret
+				#Start services
+				service httpd start
+				service mysqld start
                         else
                                 printf "testing"
 			fi
