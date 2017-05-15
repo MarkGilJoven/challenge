@@ -107,50 +107,10 @@ do
 			if [[ "$cerrcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
-				printf "Installing Lamp on $osver.\n"
-				yum -y install httpd
-				yum -y install mysql-server
-				yum -y install php php-mysql
-		
-				#check ip of host
-				#ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
-		
-				#set password for root of mysql
-				#mysqladmin -u root password $secret
-
-				#Start services
-				service httpd start
-				service mysqld start
-
-				#Configure to automatically run on boot
-				chkconfig httpd on
-				chkconfig mysqld on
-				###
 			elif [[ "$cerrcount" == 0 ]]
-                        then
-                                printf "Lamp is already installed.\n"
-                                printf "$reinstall"
-				printf "Shutting down lamp...\n"
-				service mysql stop
-				killall -vw mysqld
-				service httpd stop
-				killall -vw httpd
-				
-				printf "Uninstalling Lamp on $osver.\n"
-				yum -y remove php php-mysql 
-				yum -y remove mysql-server 
-				yum -y remove httpd
-	
-				printf "Installing Lamp on $osver.\n"
-				yum -y install httpd 
-				yum -y mysql-server 
-				yum -y php php-mysql
-	
-				#set password for root of mysql
-				#mysqladmin -u root password $secret
-				#Start services
-				service httpd start
-				service mysqld start
+			then
+				printf "Lamp is already installed\n"
+				printf "$reinstall"
                         else
                                 printf "testing"
 			fi
