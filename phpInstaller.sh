@@ -82,20 +82,37 @@ do
 			do
 				# call your procedure/other scripts here below
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
-				command="service "$i" status"
-				testservice $command
-				 
+				command="service $i status"
+				if [[testservice $command]]
+				then
+					$errcount=$errcount+1
+				fi
 			done
 			if [[ "$errcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
-				printf "Installing Lamp on $osver.\n"	
-				debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
-				debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
-				apt-get install --assume-yes lamp-server^
+				if [[ $reinstall == "true" ]]
+				then
+					printf "Reinstalling Lamp on $osver.\n"
+					printf "Stopping services.\n"
+					for i in ${lamps//,/ }
+					do
+						commandstop="service $i stop"
+					done
+					printf "Uninstalling Lamp.\n"
+					apt-get -y purge apache2 php5-cli apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client mysql-common mysql-server php5-common php5-mysql phpmyadmin && sudo apt-get autoremove
+					printf "Installing Lamp on $osver.\n"
+					debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
+					debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
+					apt-get install --assume-yes lamp-server^
+				else
+					printf "Installing Lamp on $osver.\n"
+					debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
+                                        debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
+                                        apt-get install --assume-yes lamp-server^
+				fi
 			else
-				printf "$reinstall"
-				printf "testing"
+				printf "Lamp is already installed.\n"
 			fi
 		exit 0
 	elif [[ "$lcosver" == *"centos"* ]]
