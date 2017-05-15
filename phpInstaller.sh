@@ -85,6 +85,7 @@ do
 					errcount=$((errcount+1))
 				fi
 			done
+			printf $errcount
 			if [[ $errcount > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
@@ -94,7 +95,7 @@ do
 					printf "Stopping services.\n"
 					for i in ${lamps//,/ }
 					do
-						commandstop="service $i stop"
+						serviceCommand $i stop
 					done
 					printf "Uninstalling Lamp.\n"
 					apt-get -y purge apache2 php5-cli apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client mysql-common mysql-server php5-common php5-mysql phpmyadmin && sudo apt-get autoremove
