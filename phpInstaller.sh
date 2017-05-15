@@ -14,13 +14,10 @@ if [ $# -ne 3 ]; then
 	exit 1
 fi
 
-function testservice {
-    "$@"
-    local status=$?
-    if [ $status -ne 0 ]; then
-        echo "error with $1" >&2
-    fi
-    return $status
+serviceCommand() {
+  if service --status-all | grep -Fq ${1}; then
+     service ${1} ${2}
+  fi
 }
 
 # save args and variables
@@ -48,7 +45,7 @@ if [[ ! "$work_directory" || ! -d "$work_directory" ]]; then
 fi
 
 # deletes the temp directory
-function cleanup {      
+cleanup() {      
   rm -rf "$work_directory"
   rm -rf "`basename $0`"
   echo "Deleted temp working directory $work_directory"
@@ -80,13 +77,10 @@ do
 			#for i in $(echo $lamps | sed "s/,/ /g")
 			for i in ${lamps//,/ }
 			do
-				# call your procedure/other scripts here below
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
-				command="service $i status"
-				testerr="testservice $command" 
-				if [[ $testerr == *"error"* ]]
+				command="serviceCommand $i status"
+				if [$?=1]
 				then
-					echo $testerr
 					errcount=$errcount+1
 				fi
 			done
