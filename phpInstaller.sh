@@ -22,6 +22,7 @@ lamps=apache2,apache2-bin,apache2-data,apache2-mpm-prefork,libaio1,libapache2-mo
 lampsInstalled="Yes"
 clamps=httpd,mysql-server,php,php-mysql
 errcount=0
+cerrcount=0
 
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
@@ -112,7 +113,7 @@ do
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 		
 				#set password for root of mysql
-				mysqladmin -u root password $secret
+				#mysqladmin -u root password $secret
 
 				#Start services
 				service httpd start
@@ -139,7 +140,7 @@ do
 				yum -y install httpd mysql-server php php-mysql
 	
 				#set password for root of mysql
-				mysqladmin -u root password $secret
+				#mysqladmin -u root password $secret
 				#Start services
 				service httpd start
 				service mysqld start
