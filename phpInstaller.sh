@@ -79,7 +79,7 @@ do
 			do
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
 				command="serviceCommand $i status"
-				if [$?=1]
+				if [$?==1]
 				then
 					errcount=$errcount+1
 				fi
