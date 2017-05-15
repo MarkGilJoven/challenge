@@ -68,12 +68,14 @@ do
 		apt-get update
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
-			for i in $(echo $lamps) 
+			for i in $(echo $lamps | sed "s/,/ /g")
 			do
-				service "$i" status
-				type "$i"
+				# call your procedure/other scripts here below
+				type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
 			done
-			
+			printf "Number of components not installed: $errcount\n"
+			if [[ "$errcount" > 0 ]]
+			then
 				printf "Lamp is not yet installed.\n"
 				printf "Installing Lamp on $osver.\n"	
 				debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
