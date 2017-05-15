@@ -77,16 +77,12 @@ do
 				printf "Lamp is not yet installed.\n"
 				printf "Installing Lamp on $osver.\n"	
 				apt-get install --assume-yes lamp-server^
+			elif [[ "$errcount" == 0 ]]
+			then
+				printf "Lamp is already installed\n"
+				printf "$reinstall"
 			else
-				printf "Lamp is already installed"
-				if [[ "$reinstall" > 0 ]]
-				then
-					#stop lamp services
-					#uninstall lamp
-					#install lamp
-				else
-					#check if services are started 
-				fi
+				printf "testing"
 			fi
 		exit 0
 	elif [[ "$lcosver" == *"centos"* ]]
