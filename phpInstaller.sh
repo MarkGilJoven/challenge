@@ -9,14 +9,17 @@ then
 fi
 
 # 1 argument or else no game
-if [ $# -ne 1 ]; then
-	printf "To use: `basename $0` <Random Number from Jenkins>"
+if [ $# -ne 2 ]; then
+	printf "To use: `basename $0` <Random Number from Jenkins> <Reinstall Lamp? 0 or 1>"
 	exit 1
 fi
 
-# save args
+# save args and variables
 random=$1
+reinstall=$2
 lamps=apache2,apache2-bin,apache2-data,apache2-mpm-prefork,libaio1,libapache2-mod-php5,libapr1,libaprutil1,libaprutil1-dbd-sqlite3,libaprutil1-ldap,libdbd-mysql-perl,libdbi-perl,libhtml-template-perl,libmysqlclient18,libterm-readkey-perl,mysql-client-5.5,mysql-client-core-5.5,mysql-common,mysql-server,mysql-server-5.5,mysql-server-core-5.5,php5-cli,php5-common,php5-json,php5-mysql,php5-readline,ssl-cert
+lampsInstalled="Yes"
+errcount=0
 
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
@@ -62,14 +65,28 @@ do
 		printf "Updating the $osver system before Lamp installation.\n"
 		apt-get update
 			#Check if lamp-server is installed already or not
-			for i in $(echo $lamps | sed "s/,/ /g")
+			printf "Checking if Lamp is installed already"
+			for i in $(printf $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
-				type "$i" >/dev/null 2>&1 || { echo >&2 "I require $1 but it's not installed.  Aborting."; }
+				type "$i" >/dev/null 2>&1 || { printf >&2 "I require $i but it's not installed."; errcount=$((errcount + 1)) }
 			done
-			
-		printf "Installing lamp on $osver.\n"
-		apt-get install --assume-yes lamp-server^
+			if [[ "$errcount" > 0 ]]
+			then
+				printf "Lamp is not yet installed.\n"
+				printf "Installing Lamp on $osver.\n"	
+				apt-get install --assume-yes lamp-server^
+			else
+				printf "Lamp is already installed"
+				if [[ "$reinstall" > 0 ]]
+				then
+					#stop lamp services
+					#uninstall lamp
+					#install lamp
+				else
+					#check if services are started 
+				fi
+			fi
 		exit 0
 	elif [[ "$lcosver" == *"centos"* ]]
 	then
