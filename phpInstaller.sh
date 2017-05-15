@@ -83,9 +83,10 @@ do
 				# call your procedure/other scripts here below
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
 				command="service $i status"
-				if [[testservice $command]]
+				testerr="testservice $command" 
+				if [[$testerr == *"error"*]]
 				then
-					$errcount=$errcount+1
+					errcount=$errcount+1
 				fi
 			done
 			if [[ "$errcount" > 0 ]]
