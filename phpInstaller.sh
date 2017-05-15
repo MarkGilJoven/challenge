@@ -69,7 +69,7 @@ do
 			for i in $(printf $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
-				type "$i" >/dev/null 2>&1 || { printf >&2 "I require $i but it's not installed."; $errcount=$errcount + 1; }
+				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; $errcount=$errcount + 1; }
 			done
 			printf $errcount
 			if [[ "$errcount" > 0 ]]
