@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash
 
 # Check if iam root or else no game 
 IAM=`whoami`
@@ -59,6 +59,7 @@ do
 		printf "\n$msgerr\n"
 	fi
 	# Check if os version is null
+
 	if [[ "$lcosver" == null ]]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
@@ -107,7 +108,9 @@ do
 			then
 				printf "Lamp is not yet installed.\n"
 				printf "Installing Lamp on $osver.\n"
-				yum -y install httpd mysql-server php php-mysql
+				yum -y install httpd
+				yum -y install mysql-server
+				yum -y install php php-mysql
 		
 				#check ip of host
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
@@ -134,10 +137,14 @@ do
 				killall -vw httpd
 				
 				printf "Uninstalling Lamp on $osver.\n"
-				yum -y remove php php-mysql mysql-server httpd
+				yum -y remove php php-mysql 
+				yum -y remove mysql-server 
+				yum -y remove httpd
 	
 				printf "Installing Lamp on $osver.\n"
-				yum -y install httpd mysql-server php php-mysql
+				yum -y install httpd 
+				yum -y mysql-server 
+				yum -y php php-mysql
 	
 				#set password for root of mysql
 				#mysqladmin -u root password $secret
@@ -148,7 +155,7 @@ do
                                 printf "testing"
 			fi
 		exit 0
-		else
+	else
 		printf "Figuring out hot to install this...\n"
 		exit 0
 	fi
