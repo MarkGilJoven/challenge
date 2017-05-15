@@ -57,7 +57,7 @@ do
 	then
 		printf "\n$msgerr\n"
 	fi
-
+	# Check if os version is null
 	if [[ "$lcosver" == null ]]
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
@@ -118,12 +118,10 @@ do
 				service httpd start
 				service mysqld start
 
-
 				#Configure to automatically run on boot
 				chkconfig httpd on
 				chkconfig mysqld on
 				###
-				exit 0
 			elif [[ "$errcount" == 0 ]]
                         then
                                 printf "Lamp is already installed.\n"
@@ -147,11 +145,11 @@ do
 				#Start services
 				service httpd start
 				service mysqld start
-				
                         else
                                 printf "testing"
 			fi
-	else
+		exit 0
+		else
 		printf "Figuring out hot to install this...\n"
 		exit 0
 	fi
