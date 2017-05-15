@@ -79,13 +79,14 @@ do
 			do
 				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
 				serviceCommand $i status
-				if [ $? -eq 0 ]; then
+				echo "$?"
+				if [[ $? -eq 0 ]]; then
 					continue
 				else
 					errcount=$((errcount+1))
+					printf $errcount
 				fi
 			done
-			printf $errcount
 			if [[ $errcount > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
