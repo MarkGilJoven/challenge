@@ -4,7 +4,7 @@
 IAM=`whoami`
 if [ "$IAM" != "root" ]
 then
-  echo "I'm sorry: you must be a root to run this script"
+  printf "I'm sorry: you must be a root to run this script"
   exit 1
 fi
 
@@ -35,7 +35,7 @@ work_directory=`mktemp -d "$directory/tmp.$random.XXXXX"`
 
 # check if tmp directory was created
 if [[ ! "$work_directory" || ! -d "$work_directory" ]]; then
-  echo "Could not create temp directory"
+  printf "Could not create temp directory"
   exit 1
 fi
 
@@ -105,17 +105,14 @@ do
 			if [[ "$errcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
-				printf "Installing Lap on $osver.\n"
-				
-				yum -y install httpd
-				yum -y install mysql-server
-				yum -y install php php-mysql
+				printf "Installing Lamp on $osver.\n"
+				yum -y install httpd mysql-server php php-mysql
 		
 				#check ip of host
 				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
 		
 				#set password for root of mysql
-				echo  "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('$secret');" | mysql -u root
+				mysql mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
 
 				#Start services
 				service httpd start
@@ -129,8 +126,28 @@ do
 				exit 0
 			elif [[ "$errcount" == 0 ]]
                         then
-                                printf "Lamp is already installed\n"
+                                printf "Lamp is already installed.\n"
                                 printf "$reinstall"
+				printf "Shutting down lamp..."
+				service mysql stop
+				killall -vw mysqld
+				service httpd stop
+				killall -vw httpd
+				
+				printf "Uninstalling Lamp on $osver.\n"
+				yum -y remove php php-mysql mysql-server httpd
+	
+				printf "Installing Lamp on $osver.\n"
+				#check ip of host
+				ipadd="ifconfig eth0 | grep inet | awk '{ print $2 }'"
+
+				#set password for root of mysql
+				mysql mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
+				
+				#Start services
+				service httpd start
+				service mysqld start
+				
                         else
                                 printf "testing"
 			fi
