@@ -14,6 +14,15 @@ if [ $# -ne 3 ]; then
 	exit 1
 fi
 
+function testservice {
+    "$@"
+    local status=$?
+    if [ $status -ne 0 ]; then
+        echo "error with $1" >&2
+    fi
+    return $status
+}
+
 # save args and variables
 random=$1
 reinstall=$2
@@ -71,7 +80,10 @@ do
 			for i in $(echo $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
-				type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
+				#type "$i">/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount="$errcount+1"; }
+				command="service "$i" status"
+				testservice $command
+				 
 			done
 			printf "Number of components not installed: $errcount\n"
 			if [[ "$errcount" > 0 ]]
