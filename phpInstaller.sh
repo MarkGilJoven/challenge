@@ -86,10 +86,11 @@ do
 				testerr="testservice $command" 
 				if [[ $testerr == *"error"* ]]
 				then
+					echo $testerr
 					errcount=$errcount+1
 				fi
 			done
-			if [[ "$errcount" > 0 ]]
+			if [[ $errcount > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
 				if [[ $reinstall == "true" ]]
