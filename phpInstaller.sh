@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 # Check if iam root or else no game 
 IAM=`whoami`
@@ -97,12 +97,12 @@ do
 		yum -y update
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
-			for i in $(echo $clamps | sed "s/,/ /g")
+			for j in $(echo $clamps | sed "s/,/ /g")
 			do 
-				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount+1; }
+				type "$j" >/dev/null 2>&1 || { printf >&2 "Lamp requires $j but it's not installed.\n"; cerrcount=$cerrcount+1; }
 			done
-			printf "$errcount"
-			if [[ "$errcount" > 0 ]]
+			printf "$cerrcount"
+			if [[ "$cerrcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
 				printf "Installing Lamp on $osver.\n"
@@ -122,7 +122,7 @@ do
 				chkconfig httpd on
 				chkconfig mysqld on
 				###
-			elif [[ "$errcount" == 0 ]]
+			elif [[ "$cerrcount" == 0 ]]
                         then
                                 printf "Lamp is already installed.\n"
                                 printf "$reinstall"
@@ -141,7 +141,7 @@ do
 
 				#set password for root of mysql
 				mysql -e "UPDATE user SET Password=PASSWORD('$secret') WHERE User='root';FLUSH PRIVILEGES;"
-				
+
 				#Start services
 				service httpd start
 				service mysqld start
