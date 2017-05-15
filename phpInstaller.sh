@@ -67,7 +67,7 @@ do
 		apt-get update
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already"
-			for i in $(printf $lamps | sed "s/,/ /g")
+			for i in $(echo $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
 				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount + 1; }
