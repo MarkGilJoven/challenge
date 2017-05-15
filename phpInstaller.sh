@@ -71,9 +71,9 @@ do
 			for i in $(echo $lamps | sed "s/,/ /g")
 			do
 				# call your procedure/other scripts here below
-				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount+1; }
+				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount++; }
 			done
-			printf "Number of components uninstalled: $errcount"
+			printf "Number of components not installed: $errcount\n"
 			if [[ "$errcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
