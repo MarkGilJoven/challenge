@@ -99,21 +99,21 @@ do
 		yum -y update
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
-			for j in $(echo $clamps | sed "s/,/ /g")
-			do 
-				type "$j" >/dev/null 2>&1 || { printf >&2 "Lamp requires $j but it's not installed.\n"; cerrcount=$cerrcount+1; }
-			done
-			printf "$cerrcount"
-			if [[ "$cerrcount" > 0 ]]
-			then
+			#for j in $(echo $clamps | sed "s/,/ /g")
+			#do 
+			#	type "$j" >/dev/null 2>&1 || { printf >&2 "Lamp requires $j but it's not installed.\n"; cerrcount=$cerrcount+1; }
+			#done
+			#printf "$cerrcount"
+			#if [[ "$cerrcount" > 0 ]]
+			#then
 				printf "Lamp is not yet installed.\n"
-			elif [[ "$cerrcount" == 0 ]]
-			then
-				printf "Lamp is already installed\n"
+			#elif [[ "$cerrcount" == 0 ]]
+			#then
+			#	printf "Lamp is already installed\n"
 				printf "$reinstall"
-                        else
-                                printf "testing"
-			fi
+                        #else
+                        #        printf "testing"
+			#fi
 		exit 0
 	else
 		printf "Figuring out hot to install this...\n"
