@@ -71,8 +71,8 @@ do
 			do
 				# call your procedure/other scripts here below
 				type "$i" >/dev/null 2>&1 || { printf >&2 "Lamp requires $i but it's not installed.\n"; errcount=$errcount+1; }
-				printf $errcount
 			done
+			printf "Number of components uninstalled: $errcount"
 			if [[ "$errcount" > 0 ]]
 			then
 				printf "Lamp is not yet installed.\n"
@@ -80,11 +80,8 @@ do
 				debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
 				debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
 				apt-get install --assume-yes lamp-server^
-			elif [[ "$errcount" == 0 ]]
-			then
-				printf "Lamp is already installed\n"
-				printf "$reinstall"
 			else
+				printf "$reinstall"
 				printf "testing"
 			fi
 		exit 0
