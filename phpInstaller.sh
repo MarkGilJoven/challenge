@@ -70,8 +70,8 @@ do
 			printf "Checking if Lamp is installed already.\n"
 			for i in $(echo $lamps) 
 			do
-				service $i status;
-				type $i;
+				service "$i" status
+				type "$i"
 			done
 			
 				printf "Lamp is not yet installed.\n"
