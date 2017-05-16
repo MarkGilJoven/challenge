@@ -119,7 +119,7 @@ then
     chmod 755 -R /var/www/;
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
-elif [[ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]]
+elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
 then
     printf "Installing Lamp on $osver.\n"
     #install updates first
