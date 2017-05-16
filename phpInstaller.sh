@@ -38,23 +38,22 @@ serviceCommand() {
 	fi
 }
 
-securemysqlpass() {
-	if [[$lcosver == *"ubuntu"*]]
-	then
-		debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
-		debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
-	else
-		mysql_secure_installation <<EOF
+securemysqlpassU() {
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
+}
 
-		y
-		$secret
-		$secret
-		y
-		y
-		y
-		y
-		EOF
-	fi
+securemysqlpassC() {
+mysql_secure_installation <<EOF
+
+y
+$secret
+$secret
+y
+y
+y
+y
+EOF
 }
 
 checkinstallphp() {
@@ -111,7 +110,7 @@ then
     apt-get -y install lamp-server^;
 
     #harden sql
-    securemysqlpass
+    securemysqlpassU
     
     #finalize
     chmod 755 -R /var/www/;
@@ -126,7 +125,7 @@ else
     yum -y install httpd mariadb-server mariadb php php-mysql ;
 
     #harden sql
-    securemysqlpass
+    securemysqlpassC
 
     #finalize
     chmod 755 -R /var/www/;
@@ -136,6 +135,16 @@ else
     chkconfig mysqld on;
 fi
 }
+
+# deletes the temp directory
+cleanup() {      
+  rm -rf "/tmp/`basename $0`"
+  echo "Cleanup temp directory.\n"
+}
+
+# register the cleanup function to be called on the EXIT signal
+trap cleanup EXIT
+
 while :
 do
 	if [[ "$lcosver" == null ]]
