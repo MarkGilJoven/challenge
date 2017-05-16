@@ -25,6 +25,7 @@ random=$1
 reinstall=$2
 secret=$3
 lamps="apache2,mysql"
+clamps="httpd,mariadb"
 lampsInstalled="Yes"
 errcount=0
 
@@ -73,15 +74,28 @@ do
 		python -mplatform | grep -qi $osver && apt-get update --assume-yes || yum -y update && yum -y install epel-release
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
-			for i in ${lamps//,/ }
-			do
-				testservice=$(serviceCommand $i status 2>&1)
-				if [ -n "$testservice" ]
-				then
-					printf $testservice
-					errcount=$((errcount+1))
-				fi
-			done
+			if [[ "$lcosver" == *"ubuntu"* ]]
+			then
+				for i in ${lamps//,/ }
+				do
+					testservice=$(serviceCommand $i status 2>&1)
+					if [ -n "$testservice" ]
+					then
+						printf $testservice
+						errcount=$((errcount+1))
+					fi
+				done
+			else
+				for i in ${clamps//,/ }
+				do
+					testservice=$(serviceCommand $i status 2>&1)
+					if [ -n "$testservice" ]
+                                        then
+                                                printf $testservice
+                                                errcount=$((errcount+1))
+                                        fi
+				done
+			fi
 			printf "\nCHECK $errcount\n"
 			if [[ $errcount > 0 ]]
 			then
@@ -133,7 +147,12 @@ do
 					printf "Move helloworld.php to /var/www/html .\n"
 					mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
 					printf "Restarting Apache."
-					serviceCommand apache2 restart || { printf 'Apache restart failed.' ; exit 1; }
+					if [[ $lcosver == *"ubuntu"* ]]
+                                        then
+						serviceCommand apache2 restart || { printf 'Apache restart failed.' ; exit 1; }
+					else
+						serviceCommand httpd restart || { printf 'Apache restart failed.' ; exit 1; }
+                                        fi
 				fi
 			else
 				printf "Lamp is already installed.\n"
