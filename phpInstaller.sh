@@ -39,16 +39,22 @@ serviceCommand() {
 }
 
 securemysqlpass() {
-mysql_secure_installation <<EOF
+	if [[$lcosver == *"ubuntu"*]]
+	then
+		debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
+		debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
+	else
+		mysql_secure_installation <<EOF
 
-y
-$secret
-$secret
-y
-y
-y
-y
-EOF
+		y
+		$secret
+		$secret
+		y
+		y
+		y
+		y
+		EOF
+	fi
 }
 
 checkinstallphp() {
