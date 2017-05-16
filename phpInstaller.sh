@@ -82,10 +82,12 @@ return $errcount
 uninstallphp() {
 if [ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]
 then
+    printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mysql stop;
     serviceCommand apache2 stop;
     apt-get -y purge apache2 mysql-server php libapache2-mod-php php-mcrypt php-mysql && sudo apt-get autoremove 
 else
+    printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mariadb stop;
     serviceCommand httpd stop;
     yum -y remove httpd mariadb-server mariadb php php-mysql
@@ -95,6 +97,7 @@ fi
 installphp() {
 if [ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]
 then
+    printf "Installing Lamp on $osver.\n"
     #install updates first
     apt-get -y update
 
@@ -109,6 +112,7 @@ then
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
 else
+    printf "Installing Lamp on $osver.\n"
     #install updates first
     yum -y update
  
@@ -126,18 +130,6 @@ else
     chkconfig mysqld on;
 fi
 }
-# the directory of the script
-directory="$(pwd)"
-
-# delete the temp directory
-cleanup() {      
-  rm -rf "/tmp/`basename $0`"
-  echo "Deleted temp directory.\n"
-}
-
-# register the cleanup function to be called on the EXIT signal
-trap cleanup EXIT
-
 while :
 do
 	if [[ "$lcosver" == null ]]
@@ -146,9 +138,9 @@ do
 		exit 1
 	elif [[ "$reinstall" == "true" ]]
 	then
-			uninstallphp	
-			installphp
-			exit 0
+		uninstallphp	
+		installphp
+		exit 0
 	else
 		test="checkinstallphp"
 		if [[ test > 0 ]]
@@ -156,9 +148,9 @@ do
 			printf "Lamp is not yet installed.\n"
                         printf "Attempting to install Lamp on $osver.\n"
                         installphp
+			exit 0
 		else
 			printf "Lamp is already installed.\n"
-			exit 00
 		fi
 	fi
 exit 0
