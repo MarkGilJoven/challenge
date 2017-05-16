@@ -118,7 +118,7 @@ then
     
     #finalize
     chmod 755 -R /var/www/;
-    printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
+    printf "<?php header("Content-Type: text/plain"); echo "Hello, world!"?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
 elif [[ "$lcosver" == *"centos"* ]]
 then
@@ -134,7 +134,7 @@ then
 
     #finalize
     chmod 755 -R /var/www/;
-    printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
+    printf "<?php header("Content-Type: text/plain"); echo "Hello, world!"?>" > /var/www/hello.php;
     serviceCommand httpd restart;
     chkconfig httpd on;
     chkconfig mysqld on;
