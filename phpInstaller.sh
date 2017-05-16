@@ -14,12 +14,6 @@ if [ $# -ne 3 ]; then
 	exit 1
 fi
 
-serviceCommand() {
-  if service --status-all | grep -Fq ${1}; then
-     service ${1} ${2}
-  fi
-}
-
 # save args and variables
 random=$1
 reinstall=$2
@@ -31,6 +25,40 @@ errcount=0
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 lcosver="${osver,,}"
+
+serviceCommand() {
+	if [[$lcosver == *"ubuntu"*]]
+	then
+  		if service --status-all | grep -Fq ${1}; then
+     		service ${1} ${2}
+  		fi
+	else
+		if systemctl -a | grep -Fq ${1}; then
+		systemctl ${1} ${2}
+		fi
+	fi
+}
+
+restartservice() {
+if [[ $lcosver == *"ubuntu"* ]]
+then
+	for i in ${lamps//,/ }
+	do
+		serviceCommand $i restart
+	done
+else
+	for i in ${clamps//,/ }
+	do
+		serviceCommand $i restart
+	done
+fi
+}
+
+helloworldphp() {
+printf "Move helloworld.php to /var/www/html .\n"
+mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
+}
+
 
 # the directory of the script
 directory="$(pwd)"
@@ -127,41 +155,23 @@ do
 				if [[ $reinstall == "true" ]]
 				then
 					reinstallphp
-					printf "Move helloworld.php to /var/www/html .\n"
-					mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
+					helloworldphp
 					printf "Restarting Apache."
-					if [[ $lcosver == *"ubuntu"* ]]
-					then
-						serviceCommand apache2 restart || { printf 'Apache restart failed.' ; exit 1; }
-					else
-						serviceCommand httpd restart || { printf 'Apache restart failed.' ; exit 1; }
-					fi		
+					restartservice
 				else
 					installphp
-					printf "Move helloworld.php to /var/www/html .\n"
-					mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
+					helloworldphp
 					printf "Restarting Apache."
-					if [[ $lcosver == *"ubuntu"* ]]
-                                        then
-						serviceCommand apache2 restart || { printf 'Apache restart failed.' ; exit 1; }
-					else
-						serviceCommand httpd restart || { printf 'Apache restart failed.' ; exit 1; }
-                                        fi
+					restartservice
 				fi
 			else
 				printf "Lamp is already installed.\n"
 				if [[ $reinstall == "true" ]]
 				then
 					reinstallphp
-                                        printf "Move helloworld.php to /var/www/html .\n"
-                                        mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
+					helloworldphp
                                         printf "Restarting Apache."
-                                        if [[ $lcosver == *"ubuntu"* ]]
-                                        then
-                                                serviceCommand apache2 restart || { printf 'Apache restart failed.' ; exit 1; }
-                                        else
-                                                serviceCommand httpd restart || { printf 'Apache restart failed.' ; exit 1; }
-                                        fi
+					restartservice
 				else
 				printf "Thank you.\n"
 				fi
