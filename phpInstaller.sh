@@ -85,23 +85,25 @@ return $errcount
 }
 
 uninstallphp() {
-if [ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]
+if [[ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]]
 then
     printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mysql stop;
     serviceCommand apache2 stop;
     apt-get -y purge apache2 mysql-server php libapache2-mod-php php-mcrypt php-mysql && sudo apt-get autoremove 
-elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
+elif [[ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]]
 then
     printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mariadb stop;
     serviceCommand httpd stop;
     yum -y remove httpd mariadb-server mariadb php php-mysql
+else
+    printf "Unsupported Operating System.\n"
 fi
 }
 
 installphp() {
-if [ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]
+if [[ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]]
 then
     printf "Installing Lamp on $osver.\n"
     #install updates first
@@ -117,7 +119,7 @@ then
     chmod 755 -R /var/www/;
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
-elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
+elif [[ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]]
 then
     printf "Installing Lamp on $osver.\n"
     #install updates first
@@ -135,6 +137,8 @@ then
     serviceCommand httpd restart;
     chkconfig httpd on;
     chkconfig mysqld on;
+else 
+    printf "Unsupported Operating System.\n"
 fi
 }
 
