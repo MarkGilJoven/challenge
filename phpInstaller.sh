@@ -16,6 +16,10 @@ fi
 #save args and variables
 reinstall=$1
 secret=$2
+lamps="apache2,mysql"
+errcount=0
+clamps="httpd,mariadb"
+
 
 #check version of linux/unix
 osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
@@ -38,13 +42,41 @@ securemysqlpass() {
 mysql_secure_installation <<EOF
 
 y
-secret
-secret
+$secret
+$secret
 y
 y
 y
 y
 EOF
+}
+
+checkinstallphp() {
+#Check if lamp-server is installed already or not
+printf "Checking if Lamp is installed already.\n"
+if [[ "$lcosver" == *"ubuntu"* ]]
+then
+	for i in ${lamps//,/ }
+	do
+		testservice=$(serviceCommand $i status 2>&1)
+		if [ -n "$testservice" ]
+		then
+			printf $testservice
+			errcount=$((errcount+1))
+		fi
+	done
+else
+	for i in ${clamps//,/ }
+	do
+		testservice=$(serviceCommand $i status 2>&1)
+		if [ -n "$testservice" ]
+		then
+			printf $testservice
+			errcount=$((errcount+1))
+		fi
+	done
+fi
+return $errcount
 }
 
 uninstallphp() {
@@ -114,11 +146,20 @@ do
 		exit 1
 	elif [[ "$reinstall" == "true" ]]
 	then
-		uninstallphp	
-		installphp
+			uninstallphp	
+			installphp
+			exit 0
 	else
-		printf "Attempting to install Lamp on $osver.\n"
-		installphp
+		test="checkinstallphp"
+		if [[ test > 0 ]]
+		then
+			printf "Lamp is not yet installed.\n"
+                        printf "Attempting to install Lamp on $osver.\n"
+                        installphp
+		else
+			printf "Lamp is already installed.\n"
+			exit 00
+		fi
 	fi
 exit 0
 done
