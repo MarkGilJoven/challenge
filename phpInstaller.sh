@@ -1,10 +1,4 @@
 #!/bin/bash
-# ******************************************
-# Program: LAMP Stack Installation Script
-# Developer: Pratik Patil
-# Date: 10-04-2015
-# Last Updated: 11-01-2016
-# ******************************************
 
 if [ "`lsb_release -is`" == "Ubuntu" ] || [ "`lsb_release -is`" == "Debian" ]
 then
@@ -20,7 +14,7 @@ then
     yum -y install epel-release phpmyadmin rpm-build redhat-rpm-config;
     yum -y install mysql-community-release-el7-5.noarch.rpm proj;
     yum -y install tinyxml libzip mysql-workbench-community;
-    chmod 777 -R /var/www/;
+    chmod 755 -R /var/www/;
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!\n?>" > /var/www/html/hello.php;
     service mysqld restart;
     service httpd restart;
