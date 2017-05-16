@@ -26,16 +26,9 @@ osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 lcosver="${osver,,}"
 
 serviceCommand() {
-	if [[ "$lcosver" == *"ubuntu"* ]]
-	then
-  		if service --status-all | grep -Fq ${1}; then
+  	if service --status-all | grep -Fq ${1}; then
      		service ${1} ${2}
-  		fi
-	else
-		if systemctl -a | grep -Fq ${1}; then
-		systemctl ${1} ${2}
-		fi
-	fi
+  	fi
 }
 
 securemysqlpassU() {
