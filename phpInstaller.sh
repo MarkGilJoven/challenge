@@ -26,7 +26,7 @@ osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 lcosver="${osver,,}"
 
 serviceCommand() {
-	if [[$lcosver == *"ubuntu"*]]
+	if [[ "$lcosver" == *"ubuntu"* ]]
 	then
   		if service --status-all | grep -Fq ${1}; then
      		service ${1} ${2}
@@ -91,7 +91,8 @@ then
     serviceCommand mysql stop;
     serviceCommand apache2 stop;
     apt-get -y purge apache2 mysql-server php libapache2-mod-php php-mcrypt php-mysql && sudo apt-get autoremove 
-else
+elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
+then
     printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mariadb stop;
     serviceCommand httpd stop;
@@ -110,13 +111,14 @@ then
     apt-get -y install lamp-server^;
 
     #harden sql
-    #securemysqlpassU
+    securemysqlpassU
     
     #finalize
     chmod 755 -R /var/www/;
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
-else
+elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
+then
     printf "Installing Lamp on $osver.\n"
     #install updates first
     yum -y update
@@ -125,7 +127,7 @@ else
     yum -y install httpd mariadb-server mariadb php php-mysql ;
 
     #harden sql
-    #securemysqlpassC
+    securemysqlpassC
 
     #finalize
     chmod 755 -R /var/www/;
