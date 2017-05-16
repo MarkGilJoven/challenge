@@ -63,6 +63,7 @@ then
 			errcount=$((errcount+1))
 		fi
 	done
+	printf "CHECK-$errcount\n."
 else
 	for i in ${clamps//,/ }
 	do
@@ -73,6 +74,7 @@ else
 			errcount=$((errcount+1))
 		fi
 	done
+	printf "CHECK-$errcount\n."
 fi
 return $errcount
 }
@@ -110,7 +112,7 @@ then
     securemysqlpassU
     
     #finalize
-    printf "<?php\nheader(\"Content\-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
+    printf "<?php\nheader(\"Content-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
     chmod 755 -Rf /var/www;
     serviceCommand apache2 restart;
 elif [[ "$lcosver" == *"centos"* ]]
@@ -126,7 +128,7 @@ then
     securemysqlpassC
 
     #finalize
-    printf "<?php\nheader(\"Content\-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
+    printf "<?php\nheader(\"Content-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
     chmod 755 -Rf /var/www;
     serviceCommand httpd restart;
     chkconfig httpd on;
