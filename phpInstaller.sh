@@ -31,24 +31,6 @@ serviceCommand() {
   	fi
 }
 
-securemysqlpassU() {
-debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
-debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
-}
-
-securemysqlpassC() {
-mysql_secure_installation <<EOF
-
-y
-$secret
-$secret
-y
-y
-y
-y
-EOF
-}
-
 checkinstallphp() {
 #Check if lamp-server is installed already or not
 printf "Checking if Lamp is installed already.\n"
@@ -63,7 +45,6 @@ then
 			errcount=$((errcount+1))
 		fi
 	done
-	printf "CHECK-$errcount\n."
 else
 	for i in ${clamps//,/ }
 	do
@@ -74,9 +55,7 @@ else
 			errcount=$((errcount+1))
 		fi
 	done
-	printf "CHECK-$errcount\n."
 fi
-return $errcount
 }
 
 uninstallphp() {
@@ -108,9 +87,6 @@ then
     #install the lamp stack
     apt-get -y install lamp-server^;
 
-    #harden sql
-    securemysqlpassU
-    
     #finalize
     printf "<?php\nheader(\"Content-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
     chmod 755 -Rf /var/www;
@@ -123,9 +99,6 @@ then
  
     #install the lamp stack
     yum -y install httpd mariadb-server mariadb php php-mysql ;
-
-    #harden sql
-    securemysqlpassC
 
     #finalize
     printf "<?php\nheader(\"Content-Type: text/plain\"); echo \"Hello, world!\"\n?>" > /var/www/html/hello.php;
@@ -159,8 +132,9 @@ do
 		installphp
 		exit 0
 	else
-		test="checkinstallphp"
-		if [[ test > 0 ]]
+		checkinstallphp
+		printf "CHECK-$errcount\n."
+		if [[ $errcount > 0 ]]
 		then
 			printf "Lamp is not yet installed.\n"
                         printf "Attempting to install Lamp on $osver.\n"
