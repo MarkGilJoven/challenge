@@ -26,9 +26,16 @@ osver="$(cat /etc/os-release | grep '^NAME=' | awk -F"=" '{print $2}')"
 lcosver="${osver,,}"
 
 serviceCommand() {
-  	if service --status-all | grep -Fq ${1}; then
-     		service ${3} ${4}
-  	fi
+	if [[ "$lcosver" == *"ubuntu"* ]]
+	then
+  		if service --status-all | grep ${1}; then
+     		service ${1} ${2}
+  		fi
+	else
+		if systemctl -a | grep ${1}; then
+		systemctl ${1} ${2}
+		fi
+	fi
 }
 
 checkinstallphp() {
