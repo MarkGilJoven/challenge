@@ -67,11 +67,10 @@ do
 	then
 		printf "The OS version couldn't be found.  Exiting prematurely."
 		exit 1
-	elif [[ "$lcosver" == *"ubuntu"* || "$lcosver" == *"centos"* ]]
-	then
+	else 
 		printf "Attempting to install Lamp on $osver.\n"
 		printf "Updating the $osver system before Lamp installation.\n"
-		python -mplatform | grep -qi $lcosver && apt-get update --assume-yes || yum -y update && yum -y install epel-release
+		python -mplatform | grep -qi $osver && apt-get update --assume-yes || yum -y update && yum -y install epel-release
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
 			#for i in $(echo $lamps | sed "s/,/ /g")
@@ -97,7 +96,7 @@ do
 						serviceCommand $i stop
 					done
 					printf "Uninstalling Lamp.\n"
-					python -mplatform | grep -qi $lcosver && apt-get -y purge apache2 php5-cli apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client mysql-common mysql-server php5-common php5-mysql phpmyadmin && sudo apt-get autoremove || yum -y remove httpd httpd-devel httpd-manual httpd-tools mod_auth_kerb mod_auth_mysql mod_auth_pgsql mod_authz_ldap mod_dav_svn mod_dnssd mod_nss mod_perl mod_revocator mod_ssl mod_wsgi php php-cli php-common php-gd php-ldap php-mysql php-odbc php-pdo php-pear php-pecl-apc php-pecl-memcache php-pgsql php-soap php-xml php-xmlrpc 
+					python -mplatform | grep -qi $osver && apt-get -y purge apache2 php5-cli apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client mysql-common mysql-server php5-common php5-mysql phpmyadmin && sudo apt-get autoremove || yum -y remove httpd httpd-devel httpd-manual httpd-tools mod_auth_kerb mod_auth_mysql mod_auth_pgsql mod_authz_ldap mod_dav_svn mod_dnssd mod_nss mod_perl mod_revocator mod_ssl mod_wsgi php php-cli php-common php-gd php-ldap php-mysql php-odbc php-pdo php-pear php-pecl-apc php-pecl-memcache php-pgsql php-soap php-xml php-xmlrpc 
 					printf "Installing Lamp on $osver.\n"
 					python -mplatform | grep -qi $lcosver && debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret' && debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret' || mysqladmin -u root password $secret
 					python -mplatform | grep -qi $lcosver && apt-get install --assume-yes lamp-server^ || yum -y install httpd mysql-server php php-mysql && chkconfig httpd on && chkconfig httpd on
@@ -117,9 +116,6 @@ do
 			else
 				printf "Lamp is already installed.\n"
 			fi
-		exit 0
-	else
-		printf "Figuring out hot to install this...\n"
 		exit 0
 	fi
 done
