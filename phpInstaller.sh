@@ -40,7 +40,7 @@ serviceCommand() {
 
 securemysqlpassU() {
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret'
 }
 
 securemysqlpassC() {
