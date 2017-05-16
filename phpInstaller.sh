@@ -91,7 +91,7 @@ then
     serviceCommand mysql stop;
     serviceCommand apache2 stop;
     apt-get -y purge apache2 mysql-server php libapache2-mod-php php-mcrypt php-mysql && sudo apt-get autoremove 
-elif [[ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]]
+elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
 then
     printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mariadb stop;
