@@ -1,0 +1,243 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision aa7be9c7ab28cd17ac81a4c4734cd65380f1ce7e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aa7be9c7ab28cd17ac81a4c4734cd65380f1ce7e
+ > git rev-list 9d0c282ee368d49ddd1fb10b4fc3250a0d3586ea # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins6762740566027594478.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 00:54:42 [SUCCESS] 10.1.1.249:22
+[2] 00:54:42 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 00:54:45 [SUCCESS] 10.1.1.92:22
+Lamp is not yet installed.
+Attempting to install Lamp on "CentOS Linux".
+Installing Lamp on "CentOS Linux".
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+No packages marked for update
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Package httpd-2.4.6-45.el7.centos.4.x86_64 already installed and latest version
+Package 1:mariadb-server-5.5.52-1.el7.x86_64 already installed and latest version
+Package 1:mariadb-5.5.52-1.el7.x86_64 already installed and latest version
+Package php-5.4.16-42.el7.x86_64 already installed and latest version
+Package php-mysql-5.4.16-42.el7.x86_64 already installed and latest version
+Nothing to do
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+You already have a root password set, so you can safely answer 'n'.
+
+Change the root password? [Y/n] New password: 
+Re-enter new password: 
+Sorry, passwords do not match.
+
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n]  ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n]  ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n]  - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n]  ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+Cleanup temp directory.\n
+Stderr: stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+Unknown operation 'httpd'.
+Note: Forwarding request to 'systemctl enable httpd.service'.
+error reading information on service mysqld: No such file or directory
+[2] 00:55:28 [SUCCESS] 10.1.1.249:22
+Lamp is not yet installed.
+Attempting to install Lamp on "Ubuntu".
+Installing Lamp on "Ubuntu".
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:3 http://security.ubuntu.com trusty-security/main Sources [131 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Get:4 http://security.ubuntu.com trusty-security/universe Sources [52.5 kB]
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:5 http://security.ubuntu.com trusty-security/main amd64 Packages [614 kB]
+Get:6 http://archive.ubuntu.com trusty-updates/main Sources [398 kB]
+Get:7 http://security.ubuntu.com trusty-security/universe amd64 Packages [157 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/restricted Sources [6,327 B]
+Get:9 http://archive.ubuntu.com trusty-updates/universe Sources [178 kB]
+Get:10 http://security.ubuntu.com trusty-security/main Translation-en [334 kB]
+Get:11 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,767 B]
+Get:12 http://archive.ubuntu.com trusty-updates/main amd64 Packages [981 kB]
+Get:13 http://security.ubuntu.com trusty-security/universe Translation-en [91.4 kB]
+Get:14 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [405 kB]
+Get:16 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+Get:17 http://archive.ubuntu.com trusty-updates/main Translation-en [485 kB]
+Get:18 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,430 B]
+Get:19 http://archive.ubuntu.com trusty-updates/restricted Translation-en [3,975 B]
+Get:20 http://archive.ubuntu.com trusty-updates/universe Translation-en [215 kB]
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 4,231 kB in 39s (108 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libaio1 is already the newest version.
+libapr1 is already the newest version.
+libaprutil1 is already the newest version.
+libaprutil1-dbd-sqlite3 is already the newest version.
+libaprutil1-ldap is already the newest version.
+libdbi-perl is already the newest version.
+libhtml-template-perl is already the newest version.
+libterm-readkey-perl is already the newest version.
+libwrap0 is already the newest version.
+php5-json is already the newest version.
+ssl-cert is already the newest version.
+tcpd is already the newest version.
+apache2 is already the newest version.
+apache2-bin is already the newest version.
+apache2-data is already the newest version.
+apache2-mpm-prefork is already the newest version.
+libapache2-mod-php5 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libmysqlclient18 is already the newest version.
+mysql-client-5.5 is already the newest version.
+mysql-client-core-5.5 is already the newest version.
+mysql-common is already the newest version.
+mysql-server-5.5 is already the newest version.
+mysql-server-core-5.5 is already the newest version.
+php5-cli is already the newest version.
+php5-common is already the newest version.
+php5-mysql is already the newest version.
+php5-readline is already the newest version.
+The following NEW packages will be installed:
+  mysql-server
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 0 B/11.3 kB of archives.
+After this operation, 135 kB of additional disk space will be used.
+Selecting previously unselected package mysql-server.
+(Reading database ... 68375 files and directories currently installed.)
+Preparing to unpack .../mysql-server_5.5.55-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-server (5.5.55-0ubuntu0.14.04.1) ...
+Setting up mysql-server (5.5.55-0ubuntu0.14.04.1) ...
+ * Restarting web server apache2
+   ...done.
+Cleanup temp directory.\n
+Stderr: debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.1.1.249. Set the 'ServerName' directive globally to suppress this message
+Finished: SUCCESS

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.76">
+          <name>Hostname</name>
+          <value>10.1.1.249,10.1.1.92</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames class="hudson.model.ParametersDefinitionProperty$1">
+        <outer-class>
+          <parameterDefinitions>
+            <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@0.76">
+              <name>Hostname</name>
+              <description>Select hostnames to deploy XAMPP</description>
+              <quoteValue>false</quoteValue>
+              <saveJSONParameterToFile>false</saveJSONParameterToFile>
+              <visibleItemCount>4</visibleItemCount>
+              <type>PT_MULTI_SELECT</type>
+              <value>10.1.1.249, 10.1.1.92, 54.210.15.186, 54.175.192.108, </value>
+              <defaultValue>10.1.1.249</defaultValue>
+              <multiSelectDelimiter>,</multiSelectDelimiter>
+              <projectName>installphp</projectName>
+            </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+          </parameterDefinitions>
+        </outer-class>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>mjoven</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>29</queueId>
+  <timestamp>1494764469092</timestamp>
+  <startTime>1494764469094</startTime>
+  <result>FAILURE</result>
+  <duration>409</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/Users/markgiljoven/.jenkins/workspace/installphp</workspace>
+  <hudsonVersion>2.60</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

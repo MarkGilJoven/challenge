@@ -1,0 +1,42 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a914a2d04e25718764de8be3d912a60e948956a0 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a914a2d04e25718764de8be3d912a60e948956a0
+ > git rev-list cab1d70b2b01cbac8c1c93133e065b08f3dd1490 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins4973467086661109129.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 09:10:40 [SUCCESS] 10.1.1.249:22
+[2] 09:10:41 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 09:10:41 [FAILURE] 10.1.1.249:22 Exited with error code 1
+This server is "Ubuntu".
+DEBUG---"ubuntu"---DEBUGFiguring out how to install this...Deleted temp working directory /root/tmp.19527.vWRvP
+[2] 09:10:42 [FAILURE] 10.1.1.92:22 Exited with error code 1
+This server is "CentOS Linux".
+DEBUG---"centos linux"---DEBUGFiguring out how to install this...Deleted temp working directory /root/tmp.19527.VhPZ9
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

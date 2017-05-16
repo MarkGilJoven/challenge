@@ -1,0 +1,192 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 07da74e04449e65a6ba83aa1ea99b63bfba01106 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 07da74e04449e65a6ba83aa1ea99b63bfba01106
+ > git rev-list 7ade5f3b859a65ab45cff14a41b4e5399d26622b # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins6485277556061353159.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 10:41:01 [SUCCESS] 10.1.1.249:22
+[2] 10:41:01 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 10:41:02 [SUCCESS] 10.1.1.249:22
+[2] 10:41:03 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 10:41:06 [SUCCESS] 10.1.1.249:22
+Attempting to install Lamp on "Ubuntu".
+Updating the "Ubuntu" system before Lamp installation.
+Checking if Lamp is installed already.
+tmp.10817.TX5Oo[
+CHECK 2
+Lamp is not yet installed.
+Reinstalling Lamp on "Ubuntu".
+Stopping services.
+ * Stopping web server apache2
+ * 
+Uninstalling Lamp.
+Installing Lamp on "Ubuntu".
+Move helloworld.php to /var/www/html .
+Restarting Apache. * Restarting web server apache2
+   ...done.
+Deleted temp working directory /root/tmp.17069.LSw1s
+Stderr: /tmp/phpInstaller.sh: line 74: yum: command not found
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  virtualbox-guest-x11
+/tmp/phpInstaller.sh: line 100: yum: command not found
+mysqladmin: connect to server at 'localhost' failed
+error: 'Access denied for user 'root'@'localhost' (using password: NO)'
+/tmp/phpInstaller.sh: line 103: yum: command not found
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.1.1.249. Set the 'ServerName' directive globally to suppress this message
+[2] 10:41:43 [SUCCESS] 10.1.1.92:22
+Attempting to install Lamp on "CentOS Linux".
+Updating the "CentOS Linux" system before Lamp installation.
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Resolving Dependencies
+--> Running transaction check
+---> Package ghostscript.x86_64 0:9.07-20.el7_3.3 will be updated
+---> Package ghostscript.x86_64 0:9.07-20.el7_3.5 will be an update
+---> Package ghostscript-cups.x86_64 0:9.07-20.el7_3.3 will be updated
+---> Package ghostscript-cups.x86_64 0:9.07-20.el7_3.5 will be an update
+---> Package jasper-libs.x86_64 0:1.900.1-29.el7 will be updated
+---> Package jasper-libs.x86_64 0:1.900.1-30.el7_3 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch         Version                Repository     Size
+================================================================================
+Updating:
+ ghostscript            x86_64       9.07-20.el7_3.5        updates       4.3 M
+ ghostscript-cups       x86_64       9.07-20.el7_3.5        updates        56 k
+ jasper-libs            x86_64       1.900.1-30.el7_3       updates       150 k
+
+Transaction Summary
+================================================================================
+Upgrade  3 Packages
+
+Total download size: 4.5 M
+Downloading packages:
+Delta RPMs reduced 4.5 M of updates to 342 k (92% saved)
+Finishing delta rebuilds of 1 package(s) (4.3 M)
+--------------------------------------------------------------------------------
+Total                                               62 kB/s | 342 kB  00:05     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : ghostscript-9.07-20.el7_3.5.x86_64                           1/6 
+  Updating   : ghostscript-cups-9.07-20.el7_3.5.x86_64                      2/6 
+  Updating   : jasper-libs-1.900.1-30.el7_3.x86_64                          3/6 
+  Cleanup    : ghostscript-cups-9.07-20.el7_3.3.x86_64                      4/6 
+  Cleanup    : ghostscript-9.07-20.el7_3.3.x86_64                           5/6 
+  Cleanup    : jasper-libs-1.900.1-29.el7.x86_64                            6/6 
+  Verifying  : ghostscript-9.07-20.el7_3.5.x86_64                           1/6 
+  Verifying  : jasper-libs-1.900.1-30.el7_3.x86_64                          2/6 
+  Verifying  : ghostscript-cups-9.07-20.el7_3.5.x86_64                      3/6 
+  Verifying  : ghostscript-9.07-20.el7_3.3.x86_64                           4/6 
+  Verifying  : ghostscript-cups-9.07-20.el7_3.3.x86_64                      5/6 
+  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                            6/6 
+
+Updated:
+  ghostscript.x86_64 0:9.07-20.el7_3.5                                          
+  ghostscript-cups.x86_64 0:9.07-20.el7_3.5                                     
+  jasper-libs.x86_64 0:1.900.1-30.el7_3                                         
+
+Complete!
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-9 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch             Version         Repository        Size
+================================================================================
+Installing:
+ epel-release           noarch           7-9             extras            14 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 14 k
+Installed size: 24 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-9.noarch                                      1/1 
+  Verifying  : epel-release-7-9.noarch                                      1/1 
+
+Installed:
+  epel-release.noarch 0:7-9                                                     
+
+Complete!
+Checking if Lamp is installed already.
+
+CHECK 0
+Lamp is already installed.
+Deleted temp working directory /root/tmp.17069.7cMm6
+Stderr: grep: linux": No such file or directory
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Finished: SUCCESS

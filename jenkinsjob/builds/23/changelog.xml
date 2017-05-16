@@ -1,0 +1,12 @@
+commit ac17dcf7b2d5fc1ff5c63b34b6c42b49c47a5768
+tree e4578a248d92881b68257fa48725ee0b8dfcd0c1
+parent c32e23c8a170891eda13f6febe551d91d124649b
+author Mark Gil Joven <markgiljoven@Marks-MBP.lan> 2017-05-15 00:32:26 +1000
+committer Mark Gil Joven <markgiljoven@Marks-MBP.lan> 2017-05-15 00:32:26 +1000
+
+    15/05/2017 - New update to the shell script
+
+
+
+:100644 000000 284fb79fe152bb9a513c33ba08d29e608db26b57 0000000000000000000000000000000000000000 D	CapistranoWay/capfile
+:100755 100755 bc420753df7de8d4390fc44c2d8aecf247bebec8 3b0a36b438142c608beff290deac0e385ada72a4 M	phpInstaller.sh

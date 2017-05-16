@@ -1,0 +1,44 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 62ee2e2c1cbb75d89eab076935b6444ce73c0964 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 62ee2e2c1cbb75d89eab076935b6444ce73c0964
+ > git rev-list 24c46ad2c5b59ff61d0418563abfdcf4c443fdf8 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins4750250867018236713.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 18:09:09 [SUCCESS] 10.1.1.249:22
+[2] 18:09:10 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 18:09:10 [FAILURE] 10.1.1.249:22 Exited with error code 1
+Deleted temp working directory /root/tmp.29939.0oWQl
+Stderr: /tmp/phpInstaller.sh: line 73: syntax error near unexpected token `done'
+/tmp/phpInstaller.sh: line 73: `			done'
+[2] 18:09:11 [FAILURE] 10.1.1.92:22 Exited with error code 1
+Deleted temp working directory /root/tmp.29939.l89Uk
+Stderr: /tmp/phpInstaller.sh: line 73: syntax error near unexpected token `done'
+/tmp/phpInstaller.sh: line 73: `			done'
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

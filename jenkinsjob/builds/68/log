@@ -1,0 +1,159 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 035e4c315d997138d5a4cc59521655326d1993eb (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 035e4c315d997138d5a4cc59521655326d1993eb
+ > git rev-list 28ef543897dfb90d169defea5567652b957ce789 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins7954203538508974070.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 22:37:36 [SUCCESS] 10.1.1.92:22
+[2] 22:37:36 [SUCCESS] 10.1.1.249:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 22:37:37 [SUCCESS] 10.1.1.92:22
+Attempting to install Lamp on "CentOS Linux".
+Deleted temp working directory /root/tmp.7697.xGlDx
+[2] 22:38:20 [SUCCESS] 10.1.1.249:22
+Attempting to install Lamp on "Ubuntu".
+Updating the "Ubuntu" system before Lamp installation.
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Get:2 http://security.ubuntu.com trusty-security/main Sources [130 kB]
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Get:3 http://security.ubuntu.com trusty-security/universe Sources [52.5 kB]
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Get:4 http://security.ubuntu.com trusty-security/main amd64 Packages [611 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Get:5 http://security.ubuntu.com trusty-security/universe amd64 Packages [157 kB]
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 1,017 kB in 39s (25.6 kB/s)
+Reading package lists...
+Checking if Lamp is installed already.
+Number of components not installed: 0+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1
+Lamp is not yet installed.
+Installing Lamp on "Ubuntu".
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libaio1 is already the newest version.
+libapr1 is already the newest version.
+libaprutil1 is already the newest version.
+libaprutil1-dbd-sqlite3 is already the newest version.
+libaprutil1-ldap is already the newest version.
+libdbi-perl is already the newest version.
+libhtml-template-perl is already the newest version.
+libterm-readkey-perl is already the newest version.
+libwrap0 is already the newest version.
+php5-json is already the newest version.
+ssl-cert is already the newest version.
+tcpd is already the newest version.
+apache2 is already the newest version.
+apache2-bin is already the newest version.
+apache2-data is already the newest version.
+apache2-mpm-prefork is already the newest version.
+libapache2-mod-php5 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libmysqlclient18 is already the newest version.
+mysql-client-5.5 is already the newest version.
+mysql-client-core-5.5 is already the newest version.
+mysql-common is already the newest version.
+mysql-server is already the newest version.
+mysql-server-5.5 is already the newest version.
+mysql-server-core-5.5 is already the newest version.
+php5-cli is already the newest version.
+php5-common is already the newest version.
+php5-mysql is already the newest version.
+php5-readline is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Deleted temp working directory /root/tmp.7697.94hhf
+Stderr: Lamp requires apache2-bin but it's not installed.
+Lamp requires apache2-data but it's not installed.
+Lamp requires apache2-mpm-prefork but it's not installed.
+Lamp requires libaio1 but it's not installed.
+Lamp requires libapache2-mod-php5 but it's not installed.
+Lamp requires libapr1 but it's not installed.
+Lamp requires libaprutil1 but it's not installed.
+Lamp requires libaprutil1-dbd-sqlite3 but it's not installed.
+Lamp requires libaprutil1-ldap but it's not installed.
+Lamp requires libdbd-mysql-perl but it's not installed.
+Lamp requires libdbi-perl but it's not installed.
+Lamp requires libhtml-template-perl but it's not installed.
+Lamp requires libmysqlclient18 but it's not installed.
+Lamp requires libterm-readkey-perl but it's not installed.
+Lamp requires mysql-client-5.5 but it's not installed.
+Lamp requires mysql-client-core-5.5 but it's not installed.
+Lamp requires mysql-common but it's not installed.
+Lamp requires mysql-server but it's not installed.
+Lamp requires mysql-server-5.5 but it's not installed.
+Lamp requires mysql-server-core-5.5 but it's not installed.
+Lamp requires php5-cli but it's not installed.
+Lamp requires php5-common but it's not installed.
+Lamp requires php5-json but it's not installed.
+Lamp requires php5-mysql but it's not installed.
+Lamp requires php5-readline but it's not installed.
+Lamp requires ssl-cert but it's not installed.
+Finished: SUCCESS

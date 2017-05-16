@@ -1,0 +1,150 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b521fa6c7f0ea8bb625d86cac89e0269950665fc (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b521fa6c7f0ea8bb625d86cac89e0269950665fc
+ > git rev-list b521fa6c7f0ea8bb625d86cac89e0269950665fc # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins2341106813670833494.sh
+You've selected to install this on the prod environment.
+The following hostnames are
+54.210.15.186:22
+54.175.192.108:22 .
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:18:42 [SUCCESS] 54.175.192.108:22
+[2] 13:18:43 [SUCCESS] 54.210.15.186:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:18:49 [SUCCESS] 54.175.192.108:22
+[2] 13:18:49 [SUCCESS] 54.210.15.186:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:18:53 [FAILURE] 54.175.192.108:22 Exited with error code 1
+Attempting to install Lamp on "Ubuntu".
+Updating the "Ubuntu" system before Lamp installation.
+Checking if Lamp is installed already.
+[[
+CHECK 2
+Lamp is not yet installed.
+Reinstalling Lamp on "Ubuntu".
+Stopping services.
+Uninstalling Lamp.
+Installing Lamp on "Ubuntu".
+Move helloworld.php to /var/www/html .
+Moving helloworld.php failed.Deleted temp working directory /root/tmp.14573.Mnlb1
+Stderr: /tmp/phpInstaller.sh: line 74: yum: command not found
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+/tmp/phpInstaller.sh: line 112: yum: command not found
+/tmp/phpInstaller.sh: line 114: yum: command not found
+mv: cannot move ‘/tmp/helloworld.php’ to ‘/var/www/html’: No such file or directory
+[2] 13:18:53 [FAILURE] 54.210.15.186:22 Exited with error code 1
+Attempting to install Lamp on "Ubuntu".
+Updating the "Ubuntu" system before Lamp installation.
+Checking if Lamp is installed already.
+[[
+CHECK 2
+Lamp is not yet installed.
+Reinstalling Lamp on "Ubuntu".
+Stopping services.
+Uninstalling Lamp.
+Installing Lamp on "Ubuntu".
+Move helloworld.php to /var/www/html .
+Moving helloworld.php failed.Deleted temp working directory /root/tmp.14573.EMqIx
+Stderr: /tmp/phpInstaller.sh: line 74: yum: command not found
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+/tmp/phpInstaller.sh: line 112: yum: command not found
+/tmp/phpInstaller.sh: line 114: yum: command not found
+mv: cannot move ‘/tmp/helloworld.php’ to ‘/var/www/html’: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

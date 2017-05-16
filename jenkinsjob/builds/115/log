@@ -1,0 +1,74 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8a3a30bd69bef4977016a9e8e8f844ce19f7b853 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8a3a30bd69bef4977016a9e8e8f844ce19f7b853
+ > git rev-list f5e0946fdda9f57f47159520832223961f814a74 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins8752906748645442664.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 00:22:36 [SUCCESS] 10.1.1.249:22
+[2] 00:22:36 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 00:22:36 [SUCCESS] 10.1.1.249:22
+Lamp is not yet installed.
+Attempting to install Lamp on "Ubuntu".
+Installing Lamp on "Ubuntu".
+Cleanup temp directory.\n
+Stderr: /tmp/phpInstaller.sh: line 122: yum: command not found
+/tmp/phpInstaller.sh: line 125: yum: command not found
+/tmp/phpInstaller.sh: line 29: [["ubuntu": command not found
+/tmp/phpInstaller.sh: line 35: systemctl: command not found
+/tmp/phpInstaller.sh: line 134: chkconfig: command not found
+/tmp/phpInstaller.sh: line 135: chkconfig: command not found
+[2] 00:22:39 [SUCCESS] 10.1.1.92:22
+Lamp is not yet installed.
+Attempting to install Lamp on "CentOS Linux".
+Installing Lamp on "CentOS Linux".
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+No packages marked for update
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: epel.mirror.digitalpacific.com.au
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Package httpd-2.4.6-45.el7.centos.4.x86_64 already installed and latest version
+Package 1:mariadb-server-5.5.52-1.el7.x86_64 already installed and latest version
+Package 1:mariadb-5.5.52-1.el7.x86_64 already installed and latest version
+Package php-5.4.16-42.el7.x86_64 already installed and latest version
+Package php-mysql-5.4.16-42.el7.x86_64 already installed and latest version
+Nothing to do
+Cleanup temp directory.\n
+Stderr: /tmp/phpInstaller.sh: line 29: [["centos: command not found
+Unknown operation 'httpd'.
+Note: Forwarding request to 'systemctl enable httpd.service'.
+error reading information on service mysqld: No such file or directory
+Finished: SUCCESS

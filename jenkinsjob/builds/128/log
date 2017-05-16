@@ -1,0 +1,349 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision e982b3fc6a39b2eae234fe1cb51b870053e3b0f7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e982b3fc6a39b2eae234fe1cb51b870053e3b0f7
+ > git rev-list e583898b10ad9eacdad3acc8a9cd1aaad0f5b837 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins5626286997533033874.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 02:00:36 [SUCCESS] 10.1.1.92:22
+[2] 02:00:37 [SUCCESS] 10.1.1.249:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 02:02:14 [SUCCESS] 10.1.1.249:22
+"ubuntu"Uninstalling Lamp on "Ubuntu".
+ * Stopping web server apache2
+ * 
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Installing Lamp on "Ubuntu".
+Hit http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libaio1 is already the newest version.
+libapr1 is already the newest version.
+libaprutil1 is already the newest version.
+libaprutil1-dbd-sqlite3 is already the newest version.
+libaprutil1-ldap is already the newest version.
+libdbi-perl is already the newest version.
+libhtml-template-perl is already the newest version.
+libterm-readkey-perl is already the newest version.
+libwrap0 is already the newest version.
+php5-json is already the newest version.
+ssl-cert is already the newest version.
+tcpd is already the newest version.
+apache2 is already the newest version.
+apache2-bin is already the newest version.
+apache2-data is already the newest version.
+apache2-mpm-prefork is already the newest version.
+libapache2-mod-php5 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libmysqlclient18 is already the newest version.
+mysql-client-5.5 is already the newest version.
+mysql-client-core-5.5 is already the newest version.
+mysql-common is already the newest version.
+mysql-server is already the newest version.
+mysql-server-5.5 is already the newest version.
+mysql-server-core-5.5 is already the newest version.
+php5-cli is already the newest version.
+php5-common is already the newest version.
+php5-mysql is already the newest version.
+php5-readline is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+ * Restarting web server apache2
+   ...done.
+Cleanup temp directory.
+Stderr:  [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  virtualbox-guest-x11
+E: Unable to locate package php
+E: Unable to locate package libapache2-mod-php
+E: Unable to locate package php-mcrypt
+E: Unable to locate package php-mysql
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.1.1.249. Set the 'ServerName' directive globally to suppress this message
+[2] 02:02:21 [SUCCESS] 10.1.1.92:22
+"centos linux"Uninstalling Lamp on "CentOS Linux".
+Loaded plugins: fastestmirror, langpacks
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-45.el7.centos.4 will be erased
+---> Package mariadb.x86_64 1:5.5.52-1.el7 will be erased
+---> Package mariadb-server.x86_64 1:5.5.52-1.el7 will be erased
+---> Package php.x86_64 0:5.4.16-42.el7 will be erased
+---> Package php-mysql.x86_64 0:5.4.16-42.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                    Repository     Size
+================================================================================
+Removing:
+ httpd               x86_64      2.4.6-45.el7.centos.4      @updates      9.4 M
+ mariadb             x86_64      1:5.5.52-1.el7             @base          48 M
+ mariadb-server      x86_64      1:5.5.52-1.el7             @base          56 M
+ php                 x86_64      5.4.16-42.el7              @base         4.4 M
+ php-mysql           x86_64      5.4.16-42.el7              @base         232 k
+
+Transaction Summary
+================================================================================
+Remove  5 Packages
+
+Installed size: 118 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : php-5.4.16-42.el7.x86_64                                     1/5 
+  Erasing    : 1:mariadb-server-5.5.52-1.el7.x86_64                         2/5 
+  Erasing    : httpd-2.4.6-45.el7.centos.4.x86_64                           3/5 
+  Erasing    : php-mysql-5.4.16-42.el7.x86_64                               4/5 
+  Erasing    : 1:mariadb-5.5.52-1.el7.x86_64                                5/5 
+  Verifying  : 1:mariadb-server-5.5.52-1.el7.x86_64                         1/5 
+  Verifying  : php-5.4.16-42.el7.x86_64                                     2/5 
+  Verifying  : 1:mariadb-5.5.52-1.el7.x86_64                                3/5 
+  Verifying  : httpd-2.4.6-45.el7.centos.4.x86_64                           4/5 
+  Verifying  : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+
+Removed:
+  httpd.x86_64 0:2.4.6-45.el7.centos.4       mariadb.x86_64 1:5.5.52-1.el7      
+  mariadb-server.x86_64 1:5.5.52-1.el7       php.x86_64 0:5.4.16-42.el7         
+  php-mysql.x86_64 0:5.4.16-42.el7          
+
+Complete!
+Installing Lamp on "CentOS Linux".
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+No packages marked for update
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: epel.mirror.digitalpacific.com.au
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-45.el7.centos.4 will be installed
+---> Package mariadb.x86_64 1:5.5.52-1.el7 will be installed
+---> Package mariadb-server.x86_64 1:5.5.52-1.el7 will be installed
+---> Package php.x86_64 0:5.4.16-42.el7 will be installed
+---> Package php-mysql.x86_64 0:5.4.16-42.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Installing:
+ httpd               x86_64      2.4.6-45.el7.centos.4       updates      2.7 M
+ mariadb             x86_64      1:5.5.52-1.el7              base         8.7 M
+ mariadb-server      x86_64      1:5.5.52-1.el7              base          11 M
+ php                 x86_64      5.4.16-42.el7               base         1.4 M
+ php-mysql           x86_64      5.4.16-42.el7               base         101 k
+
+Transaction Summary
+================================================================================
+Install  5 Packages
+
+Total download size: 24 M
+Installed size: 118 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              238 kB/s |  24 MB  01:42     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : httpd-2.4.6-45.el7.centos.4.x86_64                           1/5 
+  Installing : 1:mariadb-5.5.52-1.el7.x86_64                                2/5 
+  Installing : 1:mariadb-server-5.5.52-1.el7.x86_64                         3/5 
+  Installing : php-5.4.16-42.el7.x86_64                                     4/5 
+  Installing : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+  Verifying  : 1:mariadb-server-5.5.52-1.el7.x86_64                         1/5 
+  Verifying  : php-5.4.16-42.el7.x86_64                                     2/5 
+  Verifying  : 1:mariadb-5.5.52-1.el7.x86_64                                3/5 
+  Verifying  : httpd-2.4.6-45.el7.centos.4.x86_64                           4/5 
+  Verifying  : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+
+Installed:
+  httpd.x86_64 0:2.4.6-45.el7.centos.4       mariadb.x86_64 1:5.5.52-1.el7      
+  mariadb-server.x86_64 1:5.5.52-1.el7       php.x86_64 0:5.4.16-42.el7         
+  php-mysql.x86_64 0:5.4.16-42.el7          
+
+Complete!
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+You already have a root password set, so you can safely answer 'n'.
+
+Change the root password? [Y/n] New password: 
+Re-enter new password: 
+Sorry, passwords do not match.
+
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n]  ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n]  ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n]  - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n]  ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+Cleanup temp directory.
+Stderr: Unknown operation 'httpd'.
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+Note: Forwarding request to 'systemctl enable httpd.service'.
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+error reading information on service mysqld: No such file or directory
+Finished: SUCCESS

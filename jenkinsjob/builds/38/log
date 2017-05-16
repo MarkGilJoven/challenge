@@ -1,0 +1,114 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7ae234de43fccf79ac914af685a56f0b59d94d34 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7ae234de43fccf79ac914af685a56f0b59d94d34
+ > git rev-list 6359998f35a1f9c4d3217b52ffd2e8fe7530564e # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins1130572513960779799.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 09:25:49 [SUCCESS] 10.1.1.249:22
+[2] 09:25:50 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 09:25:51 [SUCCESS] 10.1.1.92:22
+Attempting to install Lamp on "CentOS Linux".Deleted temp working directory /root/tmp.27300.wAl5G
+[2] 09:26:27 [SUCCESS] 10.1.1.249:22
+Attempting to install Lamp on "Ubuntu".Hit http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Get:2 http://archive.ubuntu.com trusty-updates/main Sources [398 kB]
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:3 http://archive.ubuntu.com trusty-updates/restricted Sources [6,327 B]
+Get:4 http://archive.ubuntu.com trusty-updates/universe Sources [178 kB]
+Get:5 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,767 B]
+Get:6 http://archive.ubuntu.com trusty-updates/main amd64 Packages [978 kB]
+Get:7 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [405 kB]
+Get:9 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 2,071 kB in 34s (60.8 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libwrap0 is already the newest version.
+tcpd is already the newest version.
+Suggested packages:
+  apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+  php-pear libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
+  libsql-statement-perl libipc-sharedcache-perl tinyca mailx php5-user-cache
+  openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-mpm-prefork libaio1
+  libapache2-mod-php5 libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libdbd-mysql-perl libdbi-perl libhtml-template-perl
+  libmysqlclient18 libterm-readkey-perl mysql-client-5.5 mysql-client-core-5.5
+  mysql-common mysql-server mysql-server-5.5 mysql-server-core-5.5 php5-cli
+  php5-common php5-json php5-mysql php5-readline ssl-cert
+0 upgraded, 27 newly installed, 0 to remove and 0 not upgraded.
+Need to get 15.9 MB of archives.
+After this operation, 123 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Abort.
+Deleted temp working directory /root/tmp.27300.46sH9
+Finished: SUCCESS

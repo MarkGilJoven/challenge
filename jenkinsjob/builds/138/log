@@ -1,0 +1,199 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 20824e7bda3b86e0f338a3f704a10fd304896f2c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 20824e7bda3b86e0f338a3f704a10fd304896f2c
+ > git rev-list 20824e7bda3b86e0f338a3f704a10fd304896f2c # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins2591960459953584321.sh
+You've selected to install this on the prod environment.
+The following hostnames are
+54.210.15.186:22
+54.175.192.108:22 .
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:24:22 [FAILURE] 54.210.15.186:22 Exited with error code 1
+[2] 03:24:26 [SUCCESS] 54.175.192.108:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:24:27 [FAILURE] 54.210.15.186:22 Exited with error code 255
+Stderr: ssh: connect to host 54.210.15.186 port 22: Connection refused
+[2] 03:24:37 [SUCCESS] 54.175.192.108:22
+"ubuntu"Uninstalling Lamp on "Ubuntu".
+ [ + ]  apache2
+ * Stopping web server apache2
+ * 
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Installing Lamp on "Ubuntu".
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:2 http://security.ubuntu.com trusty-security/main Sources [131 kB]
+Get:3 http://security.ubuntu.com trusty-security/universe Sources [52.5 kB]
+Get:4 http://security.ubuntu.com trusty-security/main amd64 Packages [614 kB]
+Get:5 http://security.ubuntu.com trusty-security/universe amd64 Packages [157 kB]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Fetched 1,020 kB in 2s (415 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libaio1 is already the newest version.
+libapr1 is already the newest version.
+libaprutil1 is already the newest version.
+libaprutil1-dbd-sqlite3 is already the newest version.
+libaprutil1-ldap is already the newest version.
+libdbi-perl is already the newest version.
+libhtml-template-perl is already the newest version.
+libterm-readkey-perl is already the newest version.
+libwrap0 is already the newest version.
+php5-json is already the newest version.
+ssl-cert is already the newest version.
+tcpd is already the newest version.
+apache2 is already the newest version.
+apache2-bin is already the newest version.
+apache2-data is already the newest version.
+apache2-mpm-prefork is already the newest version.
+libapache2-mod-php5 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libmysqlclient18 is already the newest version.
+mysql-client-5.5 is already the newest version.
+mysql-client-core-5.5 is already the newest version.
+mysql-common is already the newest version.
+mysql-server is already the newest version.
+mysql-server-5.5 is already the newest version.
+mysql-server-core-5.5 is already the newest version.
+php5-cli is already the newest version.
+php5-common is already the newest version.
+php5-mysql is already the newest version.
+php5-readline is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 118 not upgraded.
+ [ - ]  apache2
+ * Restarting web server apache2
+   ...done.
+Cleanup temp directory.
+Stderr:  [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+E: Unable to locate package php
+E: Unable to locate package libapache2-mod-php
+E: Unable to locate package php-mcrypt
+E: Unable to locate package php-mysql
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,458 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 20824e7bda3b86e0f338a3f704a10fd304896f2c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 20824e7bda3b86e0f338a3f704a10fd304896f2c
+ > git rev-list 20824e7bda3b86e0f338a3f704a10fd304896f2c # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins1639408544662244513.sh
+You've selected to install this on the prod environment.
+The following hostnames are
+54.210.15.186:22
+54.175.192.108:22 .
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:15:12 [FAILURE] 54.210.15.186:22 Exited with error code 1
+[2] 03:15:18 [SUCCESS] 54.175.192.108:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:15:18 [FAILURE] 54.210.15.186:22 Exited with error code 255
+Stderr: ssh: connect to host 54.210.15.186 port 22: Connection refused
+[2] 03:15:57 [SUCCESS] 54.175.192.108:22
+Checking if Lamp is installed already.
+[[CHECK-2
+.Lamp is not yet installed.
+Attempting to install Lamp on "Ubuntu".
+Installing Lamp on "Ubuntu".
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://us-east-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Sources [398 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,327 B]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [178 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,767 B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [981 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [405 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en [485 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [7,430 B]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [3,975 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [215 kB]
+Get:14 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:15 http://security.ubuntu.com trusty-security/main Sources [131 kB]
+Get:16 http://security.ubuntu.com trusty-security/universe Sources [52.5 kB]
+Get:17 http://security.ubuntu.com trusty-security/main amd64 Packages [614 kB]
+Get:18 http://security.ubuntu.com trusty-security/universe amd64 Packages [157 kB]
+Get:19 http://security.ubuntu.com trusty-security/main Translation-en [334 kB]
+Get:20 http://security.ubuntu.com trusty-security/universe Translation-en [91.4 kB]
+Fetched 4,230 kB in 3s (1,329 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libwrap0 is already the newest version.
+tcpd is already the newest version.
+Suggested packages:
+  apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+  php-pear libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
+  libsql-statement-perl libipc-sharedcache-perl tinyca mailx php5-user-cache
+  openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-mpm-prefork libaio1
+  libapache2-mod-php5 libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libdbd-mysql-perl libdbi-perl libhtml-template-perl
+  libmysqlclient18 libterm-readkey-perl mysql-client-5.5 mysql-client-core-5.5
+  mysql-common mysql-server mysql-server-5.5 mysql-server-core-5.5 php5-cli
+  php5-common php5-json php5-mysql php5-readline ssl-cert
+0 upgraded, 27 newly installed, 0 to remove and 118 not upgraded.
+Need to get 15.9 MB of archives.
+After this operation, 123 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaio1 amd64 0.3.109-4 [6,364 B]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-common all 5.5.55-0ubuntu0.14.04.1 [13.0 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libmysqlclient18 amd64 5.5.55-0ubuntu0.14.04.1 [597 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libdbi-perl amd64 1.630-1 [879 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libdbd-mysql-perl amd64 4.025-1ubuntu0.1 [87.6 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libterm-readkey-perl amd64 2.31-1 [27.4 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client-core-5.5 amd64 5.5.55-0ubuntu0.14.04.1 [707 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client-5.5 amd64 5.5.55-0ubuntu0.14.04.1 [1,586 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server-core-5.5 amd64 5.5.55-0ubuntu0.14.04.1 [3,737 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server-5.5 amd64 5.5.55-0ubuntu0.14.04.1 [1,996 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1 [34.4 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.21 [448 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-mysql amd64 5.5.9+dfsg-1ubuntu4.21 [63.2 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.21 [2,166 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.21 [12.1 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8,634 B]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.15 [849 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.15 [159 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.15 [87.5 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-mpm-prefork amd64 2.4.7-1ubuntu4.15 [1,464 B]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.21 [2,211 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libhtml-template-perl all 2.95-1 [65.5 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server all 5.5.55-0ubuntu0.14.04.1 [11.3 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+Fetched 15.9 MB in 0s (41.7 MB/s)
+Selecting previously unselected package libaio1:amd64.
+(Reading database ... 51167 files and directories currently installed.)
+Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.109-4) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.0-1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.3-1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../mysql-common_5.5.55-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-common (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package libmysqlclient18:amd64.
+Preparing to unpack .../libmysqlclient18_5.5.55-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libmysqlclient18:amd64 (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package libdbi-perl.
+Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...
+Unpacking libdbi-perl (1.630-1) ...
+Selecting previously unselected package libdbd-mysql-perl.
+Preparing to unpack .../libdbd-mysql-perl_4.025-1ubuntu0.1_amd64.deb ...
+Unpacking libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+Selecting previously unselected package libterm-readkey-perl.
+Preparing to unpack .../libterm-readkey-perl_2.31-1_amd64.deb ...
+Unpacking libterm-readkey-perl (2.31-1) ...
+Selecting previously unselected package mysql-client-core-5.5.
+Preparing to unpack .../mysql-client-core-5.5_5.5.55-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-client-core-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-client-5.5.
+Preparing to unpack .../mysql-client-5.5_5.5.55-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-client-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-server-core-5.5.
+Preparing to unpack .../mysql-server-core-5.5_5.5.55-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-server-core-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up mysql-common (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-server-5.5.
+(Reading database ... 51547 files and directories currently installed.)
+Preparing to unpack .../mysql-server-5.5_5.5.55-0ubuntu0.14.04.1_amd64.deb ...
+Configuring mysql-server-5.5
+----------------------------
+
+While not mandatory, it is highly recommended that you set a password for the 
+MySQL administrative "root" user.
+
+If this field is left blank, the password will not be changed.
+
+New password for the MySQL "root" user: 
+Unpacking mysql-server-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package php5-json.
+Preparing to unpack .../php5-json_1.3.2-2build1_amd64.deb ...
+Unpacking php5-json (1.3.2-2build1) ...
+Selecting previously unselected package php5-common.
+Preparing to unpack .../php5-common_5.5.9+dfsg-1ubuntu4.21_amd64.deb ...
+Unpacking php5-common (5.5.9+dfsg-1ubuntu4.21) ...
+Selecting previously unselected package php5-mysql.
+Preparing to unpack .../php5-mysql_5.5.9+dfsg-1ubuntu4.21_amd64.deb ...
+Unpacking php5-mysql (5.5.9+dfsg-1ubuntu4.21) ...
+Selecting previously unselected package php5-cli.
+Preparing to unpack .../php5-cli_5.5.9+dfsg-1ubuntu4.21_amd64.deb ...
+Unpacking php5-cli (5.5.9+dfsg-1ubuntu4.21) ...
+Selecting previously unselected package php5-readline.
+Preparing to unpack .../php5-readline_5.5.9+dfsg-1ubuntu4.21_amd64.deb ...
+Unpacking php5-readline (5.5.9+dfsg-1ubuntu4.21) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.15_amd64.deb ...
+Unpacking apache2-bin (2.4.7-1ubuntu4.15) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.15_all.deb ...
+Unpacking apache2-data (2.4.7-1ubuntu4.15) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.7-1ubuntu4.15_amd64.deb ...
+Unpacking apache2 (2.4.7-1ubuntu4.15) ...
+Selecting previously unselected package apache2-mpm-prefork.
+Preparing to unpack .../apache2-mpm-prefork_2.4.7-1ubuntu4.15_amd64.deb ...
+Unpacking apache2-mpm-prefork (2.4.7-1ubuntu4.15) ...
+Selecting previously unselected package libapache2-mod-php5.
+Preparing to unpack .../libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.21_amd64.deb ...
+Unpacking libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.21) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...
+Unpacking libhtml-template-perl (2.95-1) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../mysql-server_5.5.55-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-server (5.5.55-0ubuntu0.14.04.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+Unpacking ssl-cert (1.0.33) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up libaio1:amd64 (0.3.109-4) ...
+Setting up libapr1:amd64 (1.5.0-1) ...
+Setting up libaprutil1:amd64 (1.5.3-1) ...
+Setting up libmysqlclient18:amd64 (5.5.55-0ubuntu0.14.04.1) ...
+Setting up libdbi-perl (1.630-1) ...
+Setting up libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+Setting up libterm-readkey-perl (2.31-1) ...
+Setting up mysql-client-core-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Setting up mysql-client-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Setting up mysql-server-core-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Setting up mysql-server-5.5 (5.5.55-0ubuntu0.14.04.1) ...
+Configuring mysql-server-5.5
+----------------------------
+
+While not mandatory, it is highly recommended that you set a password for the 
+MySQL administrative "root" user.
+
+If this field is left blank, the password will not be changed.
+
+New password for the MySQL "root" user: 
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+Setting up apache2-bin (2.4.7-1ubuntu4.15) ...
+Setting up apache2-data (2.4.7-1ubuntu4.15) ...
+Setting up apache2 (2.4.7-1ubuntu4.15) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+ * Starting web server apache2
+ * 
+Setting up libhtml-template-perl (2.95-1) ...
+Setting up ssl-cert (1.0.33) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mysql-server (5.5.55-0ubuntu0.14.04.1) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up apache2-mpm-prefork (2.4.7-1ubuntu4.15) ...
+Setting up php5-common (5.5.9+dfsg-1ubuntu4.21) ...
+Setting up php5-mysql (5.5.9+dfsg-1ubuntu4.21) ...
+Setting up php5-cli (5.5.9+dfsg-1ubuntu4.21) ...
+update-alternatives: using /usr/bin/php5 to provide /usr/bin/php (php) in auto mode
+Setting up php5-readline (5.5.9+dfsg-1ubuntu4.21) ...
+Setting up libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.21) ...
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+ * Restarting web server apache2
+   ...done.
+ * Restarting web server apache2
+   ...done.
+Setting up php5-json (1.3.2-2build1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+ [ + ]  apache2
+ * Restarting web server apache2
+   ...done.
+Cleanup temp directory.
+Stderr: debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Use of uninitialized value $_[1] in join or string at /usr/share/perl5/Debconf/DbDriver/Stack.pm line 111.
+Use of uninitialized value $val in substitution (s///) at /usr/share/perl5/Debconf/Format/822.pm line 83, <GEN6> line 1.
+Use of uninitialized value $val in concatenation (.) or string at /usr/share/perl5/Debconf/Format/822.pm line 84, <GEN6> line 1.
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Use of uninitialized value $_[1] in join or string at /usr/share/perl5/Debconf/DbDriver/Stack.pm line 111.
+mysql start/running, process 6669
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/pdo.ini with new version
+php5_invoke: Enable module pdo for cli SAPI
+php5_invoke: Enable module pdo for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/opcache.ini with new version
+php5_invoke: Enable module opcache for cli SAPI
+php5_invoke: Enable module opcache for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/mysql.ini with new version
+php5_invoke: Enable module mysql for cli SAPI
+php5_invoke: Enable module mysql for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/mysqli.ini with new version
+php5_invoke: Enable module mysqli for cli SAPI
+php5_invoke: Enable module mysqli for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/pdo_mysql.ini with new version
+php5_invoke: Enable module pdo_mysql for cli SAPI
+php5_invoke: Enable module pdo_mysql for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/cli/php.ini with new version
+php5_invoke pdo_mysql: already enabled for cli SAPI
+php5_invoke mysql: already enabled for cli SAPI
+php5_invoke opcache: already enabled for cli SAPI
+php5_invoke pdo: already enabled for cli SAPI
+php5_invoke mysqli: already enabled for cli SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/mods-available/readline.ini with new version
+php5_invoke: Enable module readline for cli SAPI
+php5_invoke: Enable module readline for apache2 SAPI
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/php5/apache2/php.ini with new version
+php5_invoke pdo_mysql: already enabled for apache2 SAPI
+php5_invoke mysql: already enabled for apache2 SAPI
+php5_invoke readline: already enabled for apache2 SAPI
+php5_invoke opcache: already enabled for apache2 SAPI
+php5_invoke pdo: already enabled for apache2 SAPI
+php5_invoke mysqli: already enabled for apache2 SAPI
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php5
+php5_invoke: Enable module json for cli SAPI
+php5_invoke: Enable module json for apache2 SAPI
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

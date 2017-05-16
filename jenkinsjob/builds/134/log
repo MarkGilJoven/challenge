@@ -1,0 +1,322 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 20824e7bda3b86e0f338a3f704a10fd304896f2c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 20824e7bda3b86e0f338a3f704a10fd304896f2c
+ > git rev-list 20824e7bda3b86e0f338a3f704a10fd304896f2c # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins5947500219691740134.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:12:14 [SUCCESS] 10.1.1.92:22
+[2] 03:12:14 [SUCCESS] 10.1.1.249:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 03:13:36 [SUCCESS] 10.1.1.249:22
+"ubuntu"Uninstalling Lamp on "Ubuntu".
+ [ + ]  apache2
+ * Stopping web server apache2
+ * 
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Installing Lamp on "Ubuntu".
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Get:2 http://security.ubuntu.com trusty-security/main Sources [131 kB]
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Get:3 http://security.ubuntu.com trusty-security/universe Sources [52.5 kB]
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Get:4 http://security.ubuntu.com trusty-security/main amd64 Packages [614 kB]
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Get:5 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+Get:6 http://security.ubuntu.com trusty-security/universe amd64 Packages [157 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 1,034 kB in 1min 15s (13.8 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libaio1 is already the newest version.
+libapr1 is already the newest version.
+libaprutil1 is already the newest version.
+libaprutil1-dbd-sqlite3 is already the newest version.
+libaprutil1-ldap is already the newest version.
+libdbi-perl is already the newest version.
+libhtml-template-perl is already the newest version.
+libterm-readkey-perl is already the newest version.
+libwrap0 is already the newest version.
+php5-json is already the newest version.
+ssl-cert is already the newest version.
+tcpd is already the newest version.
+apache2 is already the newest version.
+apache2-bin is already the newest version.
+apache2-data is already the newest version.
+apache2-mpm-prefork is already the newest version.
+libapache2-mod-php5 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libmysqlclient18 is already the newest version.
+mysql-client-5.5 is already the newest version.
+mysql-client-core-5.5 is already the newest version.
+mysql-common is already the newest version.
+mysql-server is already the newest version.
+mysql-server-5.5 is already the newest version.
+mysql-server-core-5.5 is already the newest version.
+php5-cli is already the newest version.
+php5-common is already the newest version.
+php5-mysql is already the newest version.
+php5-readline is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+ [ - ]  apache2
+ * Restarting web server apache2
+   ...done.
+Cleanup temp directory.
+Stderr:  [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  virtualbox-guest-x11
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  virtualbox-guest-x11
+E: Unable to locate package php
+E: Unable to locate package libapache2-mod-php
+E: Unable to locate package php-mcrypt
+E: Unable to locate package php-mysql
+ [ ? ]  apport
+ [ ? ]  console-setup
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ ? ]  dns-clean
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ ? ]  rc.local
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ ? ]  virtualbox-guest-x11
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.1.1.249. Set the 'ServerName' directive globally to suppress this message
+[2] 03:14:04 [SUCCESS] 10.1.1.92:22
+"centos linux"Uninstalling Lamp on "CentOS Linux".
+  httpd.service                                                                                                  loaded    inactive dead      The Apache HTTP Server
+Loaded plugins: fastestmirror, langpacks
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-45.el7.centos.4 will be erased
+---> Package mariadb.x86_64 1:5.5.52-1.el7 will be erased
+---> Package mariadb-server.x86_64 1:5.5.52-1.el7 will be erased
+---> Package php.x86_64 0:5.4.16-42.el7 will be erased
+---> Package php-mysql.x86_64 0:5.4.16-42.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                    Repository     Size
+================================================================================
+Removing:
+ httpd               x86_64      2.4.6-45.el7.centos.4      @updates      9.4 M
+ mariadb             x86_64      1:5.5.52-1.el7             @base          48 M
+ mariadb-server      x86_64      1:5.5.52-1.el7             @base          56 M
+ php                 x86_64      5.4.16-42.el7              @base         4.4 M
+ php-mysql           x86_64      5.4.16-42.el7              @base         232 k
+
+Transaction Summary
+================================================================================
+Remove  5 Packages
+
+Installed size: 118 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : php-5.4.16-42.el7.x86_64                                     1/5 
+  Erasing    : 1:mariadb-server-5.5.52-1.el7.x86_64                         2/5 
+  Erasing    : httpd-2.4.6-45.el7.centos.4.x86_64                           3/5 
+  Erasing    : php-mysql-5.4.16-42.el7.x86_64                               4/5 
+  Erasing    : 1:mariadb-5.5.52-1.el7.x86_64                                5/5 
+  Verifying  : 1:mariadb-server-5.5.52-1.el7.x86_64                         1/5 
+  Verifying  : php-5.4.16-42.el7.x86_64                                     2/5 
+  Verifying  : 1:mariadb-5.5.52-1.el7.x86_64                                3/5 
+  Verifying  : httpd-2.4.6-45.el7.centos.4.x86_64                           4/5 
+  Verifying  : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+
+Removed:
+  httpd.x86_64 0:2.4.6-45.el7.centos.4       mariadb.x86_64 1:5.5.52-1.el7      
+  mariadb-server.x86_64 1:5.5.52-1.el7       php.x86_64 0:5.4.16-42.el7         
+  php-mysql.x86_64 0:5.4.16-42.el7          
+
+Complete!
+Installing Lamp on "CentOS Linux".
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+No packages marked for update
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: fedora.uberglobalmirror.com
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-45.el7.centos.4 will be installed
+---> Package mariadb.x86_64 1:5.5.52-1.el7 will be installed
+---> Package mariadb-server.x86_64 1:5.5.52-1.el7 will be installed
+---> Package php.x86_64 0:5.4.16-42.el7 will be installed
+---> Package php-mysql.x86_64 0:5.4.16-42.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Installing:
+ httpd               x86_64      2.4.6-45.el7.centos.4       updates      2.7 M
+ mariadb             x86_64      1:5.5.52-1.el7              base         8.7 M
+ mariadb-server      x86_64      1:5.5.52-1.el7              base          11 M
+ php                 x86_64      5.4.16-42.el7               base         1.4 M
+ php-mysql           x86_64      5.4.16-42.el7               base         101 k
+
+Transaction Summary
+================================================================================
+Install  5 Packages
+
+Total download size: 24 M
+Installed size: 118 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              226 kB/s |  24 MB  01:47     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : httpd-2.4.6-45.el7.centos.4.x86_64                           1/5 
+  Installing : 1:mariadb-5.5.52-1.el7.x86_64                                2/5 
+  Installing : 1:mariadb-server-5.5.52-1.el7.x86_64                         3/5 
+  Installing : php-5.4.16-42.el7.x86_64                                     4/5 
+  Installing : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+  Verifying  : 1:mariadb-server-5.5.52-1.el7.x86_64                         1/5 
+  Verifying  : php-5.4.16-42.el7.x86_64                                     2/5 
+  Verifying  : 1:mariadb-5.5.52-1.el7.x86_64                                3/5 
+  Verifying  : httpd-2.4.6-45.el7.centos.4.x86_64                           4/5 
+  Verifying  : php-mysql-5.4.16-42.el7.x86_64                               5/5 
+
+Installed:
+  httpd.x86_64 0:2.4.6-45.el7.centos.4       mariadb.x86_64 1:5.5.52-1.el7      
+  mariadb-server.x86_64 1:5.5.52-1.el7       php.x86_64 0:5.4.16-42.el7         
+  php-mysql.x86_64 0:5.4.16-42.el7          
+
+Complete!
+Cleanup temp directory.
+Stderr: Unknown operation 'httpd'.
+Note: Forwarding request to 'systemctl enable httpd.service'.
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+error reading information on service mysqld: No such file or directory
+Finished: SUCCESS

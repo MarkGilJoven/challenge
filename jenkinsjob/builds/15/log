@@ -1,0 +1,45 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c32e23c8a170891eda13f6febe551d91d124649b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c32e23c8a170891eda13f6febe551d91d124649b
+ > git rev-list c32e23c8a170891eda13f6febe551d91d124649b # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins1983329353066472048.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22./System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 23:30:06 [SUCCESS] 10.1.1.249:22
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  241M   12K  241M   1% /dev
+tmpfs          tmpfs      49M  360K   49M   1% /run
+/dev/sda1      ext4       40G  1.6G   37G   5% /
+none           tmpfs     4.0K     0  4.0K   0% /sys/fs/cgroup
+none           tmpfs     5.0M     0  5.0M   0% /run/lock
+none           tmpfs     245M     0  245M   0% /run/shm
+none           tmpfs     100M     0  100M   0% /run/user
+[2] 23:30:07 [SUCCESS] 10.1.1.92:22
+Filesystem          Type      Size  Used Avail Use% Mounted on
+/dev/mapper/cl-root xfs       6.2G  4.8G  1.5G  77% /
+devtmpfs            devtmpfs  905M     0  905M   0% /dev
+tmpfs               tmpfs     920M   96K  920M   1% /dev/shm
+tmpfs               tmpfs     920M  8.7M  912M   1% /run
+tmpfs               tmpfs     920M     0  920M   0% /sys/fs/cgroup
+/dev/sda1           xfs      1014M  208M  807M  21% /boot
+tmpfs               tmpfs     184M   52K  184M   1% /run/user/1000
+tmpfs               tmpfs     184M     0  184M   0% /run/user/0
+Finished: SUCCESS

@@ -1,0 +1,36 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+Cloning the remote Git repository
+Cloning repository https://github.com/MarkGilJoven/challenge.git
+ > git init /Users/markgiljoven/.jenkins/workspace/installphp # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7c92ad5d1583a686334182232419139594e3c281 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7c92ad5d1583a686334182232419139594e3c281
+First time build. Skipping changelog.
+[installphp] $ /bin/bash -xe /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins5515234339540628208.sh
++ printf 'You'\''ve selected to install this on the dev environment.'
+You've selected to install this on the dev environment.++ cat devhostlist
+++ sed -e 's/, /,/g'
+cat: devhostlist: No such file or directory
++ hostList=
++ printf 'The following hostnames are .'
+The following hostnames are .+ echo ********
++ echo 'ls -latr'
++ /usr/local/bin/pssh $'\342\200\224hosts' devhostlist -p2 -P -I 'sudo -S su -'
+Usage: pssh [OPTIONS] command [...]
+
+pssh: error: Hosts not specified.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

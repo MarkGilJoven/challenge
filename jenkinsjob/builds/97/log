@@ -1,0 +1,85 @@
+Started by user [8mha:////4HshPszTrCegU1Q5Nrw74HWLxDxXVLkcQ/vvDtqb0JlyAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL93Kz8stQ8ADAH/7TBAAAA[0mMark Gil Joven
+Building in workspace /Users/markgiljoven/.jenkins/workspace/installphp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MarkGilJoven/challenge.git # timeout=10
+Fetching upstream changes from https://github.com/MarkGilJoven/challenge.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/MarkGilJoven/challenge.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b521fa6c7f0ea8bb625d86cac89e0269950665fc (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b521fa6c7f0ea8bb625d86cac89e0269950665fc
+ > git rev-list be94b8d2853332b8f5630148a620432db012ce60 # timeout=10
+[installphp] $ /bin/bash /var/folders/0g/nr8_n8vj4hg6t1kwz79ctwkc0000gn/T/jenkins7890059037182121370.sh
+You've selected to install this on the dev environment.
+The following hostnames are
+10.1.1.249:22
+10.1.1.92:22.
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:03:04 [SUCCESS] 10.1.1.249:22
+[2] 13:03:05 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:03:06 [SUCCESS] 10.1.1.249:22
+[2] 13:03:06 [SUCCESS] 10.1.1.92:22
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: 
+Warning: do not enter your password if anyone else has superuser
+privileges or access to your account.
+[1] 13:03:09 [SUCCESS] 10.1.1.249:22
+Attempting to install Lamp on "Ubuntu".
+Updating the "Ubuntu" system before Lamp installation.
+Checking if Lamp is installed already.
+tmp.10817.TX5Oo[
+CHECK 2
+Lamp is not yet installed.
+Installing Lamp on "Ubuntu".
+Move helloworld.php to /var/www/html .
+Restarting Apache. * Restarting web server apache2
+   ...done.
+Deleted temp working directory /root/tmp.14049.ImJy6
+Stderr: /tmp/phpInstaller.sh: line 74: yum: command not found
+/tmp/phpInstaller.sh: line 126: yum: command not found
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.1.1.249. Set the 'ServerName' directive globally to suppress this message
+[2] 13:03:13 [SUCCESS] 10.1.1.92:22
+Attempting to install Lamp on "CentOS Linux".
+Updating the "CentOS Linux" system before Lamp installation.
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: mirror.as24220.net
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+No packages marked for update
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.nsw.coloau.com.au
+ * epel: mirror.as24220.net
+ * extras: mirror.as24220.net
+ * updates: mirror.as24220.net
+Package epel-release-7-9.noarch already installed and latest version
+Nothing to do
+Checking if Lamp is installed already.
+
+CHECK 0
+Lamp is already installed.
+Deleted temp working directory /root/tmp.14049.1zzBz
+Stderr: grep: Linux": No such file or directory
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Finished: SUCCESS

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>environment</name>
+          <description>Select environment to deploy XAMPP</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>dev</string>
+              <string>prod</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>reinstall</name>
+          <description>Reinstall Lamp on all of the selected servers? (Y/N)</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/MarkGilJoven/challenge.git</url>
+        <credentialsId>53cda759-ec3c-4637-9714-03837ed9a5ad</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+printf &quot;You&apos;ve selected to install this on the $environment environment.\n&quot;
+hostList=`cat $environment&apos;hostlist&apos;`
+printf &quot;The following hostnames are\n$hostList.\n&quot;
+
+#Copy the shellscript to the multiple hostnames
+echo $rootpass | /usr/local/bin/pscp -h $environment&apos;hostlist&apos; -l root -Av phpInstaller.sh /tmp
+
+#Install LAMP
+echo $rootpass | /usr/local/bin/pssh -h $environment&apos;hostlist&apos; -t 3600 -l root -A -i &quot;source /tmp/phpInstaller.sh $reinstall $secret&quot;
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="rootpass" password="{AQAAABAAAAAQ0bXPgmGbGsO8xnwbhrAakSB9ndtsVgpxJi8rmQ1AGds=}"/>
+        <varPasswordPair var="secret" password="{AQAAABAAAAAQD1bJkHo/+Q2ih13hWv/cMtZNjpY3pep+mz5roa3w/c4=}"/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

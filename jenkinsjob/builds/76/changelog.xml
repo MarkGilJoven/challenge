@@ -1,0 +1,11 @@
+commit 2278e062fdec6a4a5e8eb52395ab9b2845c836b4
+tree 2be8274f7a8bb0e17a57154f4d4a8b47374c6234
+parent d9d252aa1910a82ec87d1818cb3c091aa3ef9fb2
+author Mark Gil Joven <markgiljoven@Marks-MBP.lan> 2017-05-16 00:25:00 +1000
+committer Mark Gil Joven <markgiljoven@Marks-MBP.lan> 2017-05-16 00:25:00 +1000
+
+    15/05/2017 - New update to the shell script again and again...
+
+
+
+:100644 100644 c8c61540e5e036e208d6d4841ac032115a0bb0bd e70c03d952f66dd1e26d0cc9723ed0174dc7c99e M	phpInstaller.sh
