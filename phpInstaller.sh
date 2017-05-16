@@ -27,7 +27,7 @@ lcosver="${osver,,}"
 
 serviceCommand() {
   	if service --status-all | grep -Fq ${1}; then
-     		service ${1} ${2}
+     		service ${3} ${4}
   	fi
 }
 
