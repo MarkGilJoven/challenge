@@ -85,7 +85,7 @@ return $errcount
 }
 
 uninstallphp() {
-if [[ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]]
+if [ [[ "$lcosver" == *"ubuntu"* a]] || [[ "$lcosver" == *"debian"* ]] ]
 then
     printf "Uninstalling Lamp on $osver.\n"
     serviceCommand mysql stop;
@@ -103,7 +103,7 @@ fi
 }
 
 installphp() {
-if [[ "$lcosver" == *"ubuntu"* ] || [ "$lcosver" == *"debian"* ]]
+if [ [[ "$lcosver" == *"ubuntu"* ]] || [[ "$lcosver" == *"debian"* ]] ]
 then
     printf "Installing Lamp on $osver.\n"
     #install updates first
