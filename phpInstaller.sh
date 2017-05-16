@@ -112,7 +112,6 @@ then
 
     #install the lamp stack
     apt-get -y install lamp-server^;
-    apt-get -y install php-cli;
 
     #harden sql
     securemysqlpassU
@@ -147,7 +146,7 @@ fi
 # deletes the temp directory
 cleanup() {      
   rm -rf "/tmp/`basename $0`"
-  echo "Cleanup temp directory.\n"
+  printf "Cleanup temp directory.\n"
 }
 
 # register the cleanup function to be called on the EXIT signal
