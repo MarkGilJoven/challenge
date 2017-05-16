@@ -53,13 +53,10 @@ then
     serviceCommand mysql stop;
     serviceCommand apache2 stop;
     apt-get -y purge apache2 mysql-server php libapache2-mod-php php-mcrypt php-mysql && sudo apt-get autoremove 
-elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
-then
+else
     serviceCommand mariadb stop;
     serviceCommand httpd stop;
     yum -y remove httpd mariadb-server mariadb php php-mysql
-else
-    echo "Unsupported Operating System";
 fi
 }
 
@@ -79,9 +76,7 @@ then
     chmod 755 -R /var/www/;
     printf "<?php\nheader("Content-Type: text/plain"); echo "Hello, world!"\n?>" > /var/www/html/hello.php;
     serviceCommand apache2 restart;
-
-elif [ "$lcosver" == *"centos"* ] || [ "$lcosver" == *"redhat"* ]
-then
+else
     #install updates first
     yum -y update
  
@@ -97,8 +92,6 @@ then
     serviceCommand httpd restart;
     chkconfig httpd on;
     chkconfig mysqld on;
-else
-    echo "Unsupported Operating System";
 fi
 }
 # the directory of the script
@@ -107,7 +100,7 @@ directory="$(pwd)"
 # delete the temp directory
 cleanup() {      
   rm -rf "/tmp/`basename $0`"
-  echo "Deleted temp working directory $work_directory"
+  echo "Deleted temp directory.\n"
 }
 
 # register the cleanup function to be called on the EXIT signal
@@ -127,5 +120,6 @@ do
 		printf "Attempting to install Lamp on $osver.\n"
 		installphp
 	fi
+exit 0
 done
 
