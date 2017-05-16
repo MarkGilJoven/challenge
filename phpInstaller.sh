@@ -110,7 +110,7 @@ then
     apt-get -y install lamp-server^;
 
     #harden sql
-    securemysqlpassU
+    #securemysqlpassU
     
     #finalize
     chmod 755 -R /var/www/;
@@ -125,7 +125,7 @@ else
     yum -y install httpd mariadb-server mariadb php php-mysql ;
 
     #harden sql
-    securemysqlpassC
+    #securemysqlpassC
 
     #finalize
     chmod 755 -R /var/www/;
