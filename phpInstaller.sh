@@ -24,7 +24,7 @@ serviceCommand() {
 random=$1
 reinstall=$2
 secret=$3
-lamps="apache2 || httpd","mysql || mariadb"
+lamps="apache2,mysql"
 lampsInstalled="Yes"
 errcount=0
 
@@ -47,7 +47,7 @@ fi
 # deletes the temp directory
 cleanup() {      
   rm -rf "$work_directory"
-  rm -rf `basename $0`
+  rm -rf "`basename $0`"
   echo "Deleted temp working directory $work_directory"
 }
 
@@ -73,7 +73,6 @@ do
 		python -mplatform | grep -qi $osver && apt-get update --assume-yes || yum -y update && yum -y install epel-release
 			#Check if lamp-server is installed already or not
 			printf "Checking if Lamp is installed already.\n"
-			#for i in $(echo $lamps | sed "s/,/ /g")
 			for i in ${lamps//,/ }
 			do
 				testservice=$(serviceCommand $i status 2>&1)
@@ -99,7 +98,16 @@ do
 					python -mplatform | grep -i $osver && apt-get -y purge apache2 php5-cli apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client mysql-common mysql-server php5-common php5-mysql phpmyadmin && sudo apt-get autoremove || yum -y remove httpd httpd-devel httpd-manual httpd-tools mod_auth_kerb mod_auth_mysql mod_auth_pgsql mod_authz_ldap mod_dav_svn mod_dnssd mod_nss mod_perl mod_revocator mod_ssl mod_wsgi php php-cli php-common php-gd php-ldap php-mysql php-odbc php-pdo php-pear php-pecl-apc php-pecl-memcache php-pgsql php-soap php-xml php-xmlrpc 
 					printf "Installing Lamp on $osver.\n"
 					python -mplatform | grep -qi $osver && apt-get install --assume-yes lamp-server^ || yum -y install httpd mariadb mariadb-server php php-mysql && chkconfig httpd on && chkconfig httpd on
-					python -mplatform | grep -qi $osver && debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret' && debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret' || mysqladmin -u root password $secret
+					mysql_secure_installation <<EOF
+
+					y
+					$secret
+					$secret
+					y
+					y
+					y
+					y
+					EOF
 					printf "Move helloworld.php to /var/www/html .\n"
 					mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
 					printf "Restarting Apache."
@@ -111,8 +119,17 @@ do
 					fi		
 				else
 					printf "Installing Lamp on $osver.\n"
-					python -mplatform | grep -qi $lcosver && debconf-set-selections <<< 'mysql-server mysql-server/root_password password $secret' && debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $secret' || mysqladmin -u root password $secret
-					python -mplatform | grep -qi $lcosver && apt-get install --assume-yes lamp-server^ || yum -y install httpd mysql-server php php-mysql && chkconfig httpd on && chkconfig httpd on
+					mysql_secure_installation <<EOF
+
+                                        y
+                                        $secret
+                                        $secret
+                                        y
+                                        y
+                                        y
+                                        y
+                                        EOF
+					python -mplatform | grep -qi $lcosver && apt-get install --assume-yes lamp-server^ || yum -y install httpd mariadb mariadb-server php php-mysql && chkconfig httpd on && chkconfig httpd on
 					printf "Move helloworld.php to /var/www/html .\n"
 					mv /tmp/helloworld.php /var/www/html || { printf 'Moving helloworld.php failed.' ; exit 1; }
 					printf "Restarting Apache."
