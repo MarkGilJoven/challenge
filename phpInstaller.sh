@@ -47,7 +47,7 @@ fi
 # deletes the temp directory
 cleanup() {      
   rm -rf "$work_directory"
-  rm -rf "`basename $0`"
+  rm -rf `basename $0`
   echo "Deleted temp working directory $work_directory"
 }
 
